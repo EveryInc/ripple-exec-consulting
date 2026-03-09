@@ -1,0 +1,16 @@
+opportunity_id,account_name,segment,deal_stage,amount,currency,close_date,probability,account_manager,product_interest,next_step,days_in_stage,last_activity
+OPP-2601,Barclays Treasury Services,Enterprise,Negotiation,850000,USD,2026-04-15,70,Sarah Mitchell,Cash Forecasting + Payment Hub + Bank Connectivity,Contract redline review — legal on both sides engaged,14,2026-03-07
+OPP-2602,Maersk Group Treasury,Enterprise,Technical Evaluation,720000,USD,2026-05-30,45,James Thornton,Full Platform,POC environment provisioned — 2 week evaluation starting March 10,7,2026-03-08
+OPP-2603,Nestlé Treasury Center,Enterprise,Discovery,600000,USD,2026-06-30,25,Sarah Mitchell,Cash Forecasting + Risk Management,Initial demo completed — CFO wants deeper dive on forecasting accuracy,21,2026-03-05
+OPP-2604,Siemens Financial Services,Enterprise,Proposal Sent,540000,USD,2026-04-30,55,James Thornton,Payment Hub + Bank Connectivity,Proposal sent March 3 — decision expected by April 15,6,2026-03-09
+OPP-2605,Toyota Financial Services,Enterprise,Negotiation,480000,USD,2026-03-31,80,David Park,Cash Forecasting + Payment Hub,Final pricing discussion scheduled March 12. Strong champion in treasury VP.,8,2026-03-09
+OPP-2606,Flex Ltd,Mid-Market,Proposal Sent,220000,USD,2026-04-15,50,Lisa Chen,Payment Hub + Bank Connectivity,Waiting on procurement review. Budget approved by treasury director.,12,2026-03-06
+OPP-2607,H&M Group,Mid-Market,Technical Evaluation,195000,USD,2026-05-15,40,David Park,Cash Forecasting,POC running — initial feedback positive. Competing with Kyriba.,18,2026-03-04
+OPP-2608,Ryder System,Mid-Market,Discovery,175000,USD,2026-06-15,20,Lisa Chen,Full Platform,First demo March 14. Referred by existing customer (GATX Corp).,3,2026-03-09
+OPP-2609,Emerson Electric,Mid-Market,Negotiation,210000,USD,2026-03-28,75,Sarah Mitchell,Cash Forecasting + Risk Management,MSA nearly finalized. Implementation start target: April 7.,5,2026-03-08
+OPP-2610,AES Corporation,Mid-Market,Proposal Sent,165000,USD,2026-04-30,45,James Thornton,Bank Connectivity Suite,Competing with incumbent (FIS). Our multi-bank advantage resonates.,10,2026-03-07
+OPP-2611,Ripple Payments (Cross-sell),Enterprise,Discovery,350000,USD,2026-06-30,30,David Park,RLUSD Settlement + Cross-Border,Synergy opportunity — existing Ripple Payments customer exploring treasury. Joint pitch with Ripple sales team.,5,2026-03-08
+OPP-2612,Hidden Road (Internal),Enterprise,Negotiation,0,USD,2026-04-01,95,Internal,Full Platform,Internal deployment for Ripple's prime brokerage unit. Implementation planning underway.,20,2026-03-09
+OPP-2613,Deutsche Post DHL,Enterprise,Discovery,680000,USD,2026-07-31,15,James Thornton,Cash Forecasting + Payment Hub,Inbound inquiry from their treasury team. First call March 11.,1,2026-03-09
+OPP-2614,CF Industries,Mid-Market,Technical Evaluation,145000,USD,2026-05-15,35,Lisa Chen,Cash Forecasting,POC in progress. Key ask: integration with SAP S/4HANA.,22,2026-03-03
+OPP-2615,Cardinal Health,Mid-Market,Proposal Sent,190000,USD,2026-04-15,50,David Park,Payment Hub + Risk Management,Proposal delivered. Decision maker on PTO until March 15.,15,2026-03-01

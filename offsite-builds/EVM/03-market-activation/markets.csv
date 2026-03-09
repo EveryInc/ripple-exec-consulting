@@ -1,0 +1,24 @@
+region,country,market_status,license_type,license_status,active_partners,odl_corridor_status,monthly_volume_usd,launch_date,regulatory_contact,notes,alert
+Asia-Pacific,Japan,Active,FSA Virtual Asset License,Granted,28,Active,"$420,000,000",2019-04-01,SBI Holdings,"Largest market; SBI partnership anchor",
+Asia-Pacific,Singapore,Active,MAS Major Payment Institution,Granted,22,Active,"$310,000,000",2020-01-15,DBS Bank,"Strong custody demand from institutions",
+Asia-Pacific,Philippines,Active,BSP Virtual Currency Exchange,Granted,15,Active,"$185,000,000",2019-09-01,Multiple remittance partners,"Key remittance destination corridor",
+Asia-Pacific,Australia,Active,AUSTRAC DCE Registration,Granted,12,Active,"$145,000,000",2020-06-01,Regional banks,"Growing RLUSD interest",
+Asia-Pacific,Thailand,Active,SEC Digital Asset License,Granted,8,Active,"$78,000,000",2021-03-01,SCB Group,"Steady growth",
+Asia-Pacific,India,Launching,RBI Sandbox Participant,Pending,3,Pilot,"$12,000,000",2025-11-01,,"Regulatory environment improving; CBDC pilot active",license_pending
+Asia-Pacific,South Korea,Pipeline,FSC VASP Registration,Application Submitted,0,Not Started,"$0",,,Applied Q4 2025; decision expected Q2 2026,license_pending
+Asia-Pacific,Vietnam,Pipeline,SBV Fintech License,Exploratory,0,Not Started,"$0",,,"Early discussions; large remittance corridor from Japan",
+Middle East,UAE (Dubai),Active,DFSA Blockchain Payments License,Granted,18,Active,"$265,000,000",2025-03-01,Zand Bank,"First blockchain payments DFSA license; rapid growth",
+Middle East,Saudi Arabia,Launching,SAMA Fintech License,Granted,5,Pilot,"$25,000,000",2025-09-01,,"Partner onboarding accelerating; Vision 2030 aligned",
+Middle East,Bahrain,Active,CBB Crypto Asset License,Granted,6,Active,"$42,000,000",2022-08-01,,"Regional hub for smaller institutions",
+Middle East,Qatar,Pipeline,QCB Fintech Sandbox,Application Submitted,0,Not Started,"$0",,,Applied Jan 2026; strong government interest,license_pending
+Europe,United Kingdom,Active,FCA E-Money/Payments License,Granted,20,Active,"$290,000,000",2026-01-15,AMINA Bank + others,"Just launched; rapid partner onboarding",
+Europe,Luxembourg,Active,CSSF Payment Institution License,Granted,14,Active,"$175,000,000",2026-01-20,,"EU passporting hub",
+Europe,Switzerland,Active,FINMA DLT Trading License,Granted,10,Active,"$130,000,000",2021-06-01,AMINA Bank (formerly SEBA),"Custody + payments; strong institutional base",
+Europe,Germany,Pipeline,BaFin Crypto Custody License,Application Submitted,0,Not Started,"$0",,,Submitted Q1 2026; decision expected Q3 2026,license_pending
+Europe,France,Pipeline,AMF DASP Registration,Exploratory,0,Not Started,"$0",,,"Exploring market entry; MiCA framework helpful",
+Americas,United States,Active,State Money Transmitter (45 states),Granted,35,Active,"$580,000,000",2018-01-01,Multiple,"Largest revenue market; RLUSD launched Dec 2024",
+Americas,Brazil,Active,BCB Payment Institution,Granted,10,Active,"$95,000,000",2023-04-01,,"Growing LATAM hub; stablecoin demand increasing",
+Americas,Mexico,Launching,CNBV Fintech License,Granted,4,Pilot,"$18,000,000",2025-07-01,,"Key US-Mexico remittance corridor",
+Americas,Colombia,Pipeline,SFC Fintech License,Exploratory,0,Not Started,"$0",,,"CBDC pilot active; exploring commercial entry",
+Africa,Nigeria,Pipeline,SEC Digital Asset License,Exploratory,0,Not Started,"$0",,,"Largest African remittance market; regulatory uncertainty",
+Africa,South Africa,Pipeline,FSCA Crypto Asset License,Application Submitted,0,Not Started,"$0",,,Applied Q4 2025; promising regulatory framework,license_pending

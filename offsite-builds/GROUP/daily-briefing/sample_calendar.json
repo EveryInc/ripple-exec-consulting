@@ -1,0 +1,70 @@
+{
+  "date": "2026-03-10",
+  "timezone": "America/New_York",
+  "meetings": [
+    {
+      "title": "AI Offsite Training Session",
+      "start": "11:00",
+      "end": "15:00",
+      "location": "Mindspace Coworking, Wynwood, Miami",
+      "organizer": "MK",
+      "attendees": [
+        "ML", "JB", "EVM",
+        "SA", "KH", "MK",
+        "RN", "Mike (Ripple Exec Consulting)",
+        "Natalia (Ripple Exec Consulting)", "Srahman"
+      ],
+      "description": "Hands-on AI session. Claude Cowork + optional Claude Code track. Lunch provided.",
+      "prep_notes": "Bring laptop. Connectors pre-configured — Gmail, Calendar, Slack, Drive. Sample data provided for group exercise."
+    },
+    {
+      "title": "Exec Team Sync — Board Prep Check-in",
+      "start": "15:30",
+      "end": "16:00",
+      "location": "Same conference room (Mindspace)",
+      "organizer": "BG",
+      "attendees": [
+        "BG", "ML", "JB",
+        "SA", "EVM", "KH",
+        "MK", "RN"
+      ],
+      "description": "Quick sync on board materials status. Each exec confirms their section is on track for Wednesday deadline.",
+      "prep_notes": "Know the status of your board deck section. Brad will ask each person for a 60-second status update."
+    },
+    {
+      "title": "1:1 with Diana Walsh (Regulatory)",
+      "start": "16:30",
+      "end": "17:00",
+      "location": "Phone",
+      "organizer": "You",
+      "attendees": ["Diana Walsh"],
+      "description": "Weekly regulatory update. Standing agenda: jurisdiction updates, license status, escalations.",
+      "prep_notes": "Diana sent email about FCA compliance officer nomination — needs sign-off by Tuesday. Also check on DFSA annual review prep."
+    },
+    {
+      "title": "LATAM Corridor Partnership — Internal Review",
+      "start": "17:00",
+      "end": "17:30",
+      "location": "Zoom",
+      "organizer": "EVM",
+      "attendees": [
+        "EVM", "SA", "JB",
+        "James Morton"
+      ],
+      "description": "Review Banco Santander LOI for Brazil-Mexico corridor. Legal and finance sign-off needed before countersigning.",
+      "prep_notes": "LOI attached to Eric's email from this morning. Target: announce at Consensus in May. James Morton handling legal review."
+    },
+    {
+      "title": "GTreasury Integration Check-in",
+      "start": "17:30",
+      "end": "18:00",
+      "location": "Zoom",
+      "organizer": "RN",
+      "attendees": [
+        "RN", "JB", "Product Integration Team"
+      ],
+      "description": "Biweekly integration status. Focus: Ripple Custody integration beta timeline and customer pilot selection.",
+      "prep_notes": "Renaat sent Q1 preview last night — ARR at $48.2M, net retention 112%. Custody integration targeting April beta."
+    }
+  ]
+}

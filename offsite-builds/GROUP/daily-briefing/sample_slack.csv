@@ -1,0 +1,11 @@
+msg_id,timestamp,channel,from_name,from_role,content,thread_replies,mentions_you
+S001,2026-03-10 08:05,#exec-team,BG,CEO,"Reminder: board materials due Wednesday. No extensions. If your section needs help, ask now, not Wednesday morning.",0,true
+S002,2026-03-10 07:55,#product-updates,David Schwartz,CTO,"XRPL amendment vote passed overnight — Batch Transactions feature goes live on mainnet March 15. This is a big one for our enterprise customers. Thread with technical details below.",4,false
+S003,2026-03-10 07:30,#legal-regulatory,Diana Walsh,VP Regulatory Affairs,"Quick win: Luxembourg CSSF license fully operational + EU passporting activated. Clean approval, no conditions. We're now live in 8 EU markets.",2,false
+S004,2026-03-10 08:10,#exec-team,JB,CFO,"Q1 forecast attached to email. TL;DR: revenue +4% vs plan, OpEx slightly hot from acquisition headcount. Net: we're in good shape.",0,false
+S005,2026-03-09 22:30,#product-updates,Engineering Bot,Automated,"Deployment complete: RLUSD redemption API v2.3 — 40% latency improvement on large redemptions. Release notes in Confluence.",0,false
+S006,2026-03-10 07:40,#exec-team,MK,SVP People,"Benefits harmonization decision needed by Thursday — see my email with the memo. Key question is dental coverage: match Hidden Road's plan company-wide or grandfather. $180K/yr delta.",3,true
+S007,2026-03-10 08:15,DM,Natalia (Ripple Exec Consulting),Consultant,"Good morning! Looking forward to the session today. All connectors are tested and working. See you at Mindspace at 10:30 for setup.",0,true
+S008,2026-03-10 07:00,#sales-pipeline,VP Sales,Sales Leadership,"New enterprise deal alert: Major US bank — $2.4M ACV for Payments + Custody bundle. Stage: Technical evaluation. Close target: Q2. This would be our largest single deal this year.",1,false
+S009,2026-03-09 23:00,#product-updates,Rachel Mayer,VP Product,"Heads up: Custody platform maintenance window Saturday night went long. All systems restored by 2am ET Sunday. No customer impact. Post-mortem scheduled for Tuesday.",2,false
+S010,2026-03-10 08:00,#legal-regulatory,Marcus Chen,VP Compliance,"AML system recalibration complete. False positive rate: 12% → 2.1%. System production-ready. Full report going to regulators this week per our commitment.",1,false

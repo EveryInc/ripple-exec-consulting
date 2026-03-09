@@ -1,0 +1,34 @@
+acquisition,deal_value,close_date,workstream,milestone,status,target_date,completion_date,owner,notes,synergy_link
+Hidden Road,$1.25B,2025-06-15,Technology,API integration with Ripple Payments,Complete,2025-09-01,2025-08-28,CTO Office,Completed ahead of schedule,Payments + Prime
+Hidden Road,$1.25B,2025-06-15,Technology,RLUSD collateral integration,In Progress,2026-03-31,,Prime Engineering,Beta testing with 5 institutional clients,RLUSD + Prime
+Hidden Road,$1.25B,2025-06-15,Technology,Unified risk management platform,At Risk,2026-04-15,,Risk Team,Dependency on GTreasury data feeds; delayed 3 weeks,Prime + Treasury
+Hidden Road,$1.25B,2025-06-15,People,Org structure finalization,Complete,2025-08-01,2025-07-20,HR/People,Marc Asch confirmed as CEO Ripple Prime,
+Hidden Road,$1.25B,2025-06-15,People,Compensation harmonization,Complete,2025-10-01,2025-09-28,People Team,Aligned to Ripple bands with retention packages,
+Hidden Road,$1.25B,2025-06-15,Product,Cross-margining digital + traditional assets,In Progress,2026-06-01,,Product - Prime,Key differentiator; on track,Prime + Payments
+Hidden Road,$1.25B,2025-06-15,Legal,Regulatory license transfers (12 jurisdictions),In Progress,2026-06-30,,Legal,8 of 12 complete; 4 pending (UK/SG/HK/AE),
+Hidden Road,$1.25B,2025-06-15,Finance,Financial reporting consolidation,Complete,2025-09-30,2025-09-15,Finance,Now on unified reporting,
+Hidden Road,$1.25B,2025-06-15,Go-to-Market,Joint institutional sales pitch,In Progress,2026-03-15,,Sales,Combined deck ready; training sales team,Prime + Payments + Custody
+GTreasury,$1B,2025-08-01,Technology,Cloud migration to Ripple infrastructure,In Progress,2026-05-01,,Platform Engineering,40% complete; on track,
+GTreasury,$1B,2025-08-01,Technology,RLUSD treasury management module,At Risk,2026-04-30,,Treasury Product,API spec delays; needs architecture review,RLUSD + Treasury
+GTreasury,$1B,2025-08-01,Technology,Integration with Metaco custody,In Progress,2026-06-01,,Custody Engineering,Data model alignment underway,Custody + Treasury
+GTreasury,$1B,2025-08-01,People,Key talent retention (90-day),Complete,2025-11-01,2025-10-28,People Team,98% retention rate achieved,
+GTreasury,$1B,2025-08-01,People,Engineering team integration,In Progress,2026-03-31,,Engineering Leadership,Joint sprints started; cultural integration ongoing,
+GTreasury,$1B,2025-08-01,Product,Ripple Payments data feed into GTreasury,In Progress,2026-04-15,,Product - Treasury,Will enable real-time treasury visibility for payment clients,Payments + Treasury
+GTreasury,$1B,2025-08-01,Legal,IP assignment and license audit,Complete,2025-10-15,2025-10-10,Legal,Clean transfer,
+GTreasury,$1B,2025-08-01,Finance,Revenue recognition alignment,Complete,2025-11-30,2025-11-25,Finance,Aligned to ASC 606,
+GTreasury,$1B,2025-08-01,Go-to-Market,Cross-sell to existing Ripple Payments clients,In Progress,2026-04-01,,Sales,"Pipeline of 45 clients identified; 8 in active conversations",Payments + Treasury
+Rail,$200M,2025-09-15,Technology,Stablecoin payment rails integration with RLUSD,In Progress,2026-03-31,,Payments Engineering,Core integration 70% complete,RLUSD + Payments
+Rail,$200M,2025-09-15,Technology,Multi-stablecoin support (USDC/USDT compatibility),Blocked,2026-05-15,,Payments Engineering,Legal review needed on third-party stablecoin support,
+Rail,$200M,2025-09-15,People,Team onboarding to Ripple systems,Complete,2025-11-01,2025-10-20,People/IT,All 35 employees transitioned,
+Rail,$200M,2025-09-15,Product,B2B payment product unification,In Progress,2026-04-30,,Product - Payments,Merging Rail's B2B flows with Ripple Payments,Payments + RLUSD
+Rail,$200M,2025-09-15,Legal,Money transmitter license transfers,In Progress,2026-06-30,,Legal,5 of 8 US state licenses transferred,
+Rail,$200M,2025-09-15,Go-to-Market,Combined B2B stablecoin go-to-market,At Risk,2026-04-15,,Marketing,Messaging alignment with RLUSD positioning delayed,RLUSD + Payments
+Palisade,Undisclosed,2025-10-01,Technology,MPC wallet integration with Metaco custody,In Progress,2026-05-01,,Custody Engineering,Architecture review complete; implementation started,Custody
+Palisade,Undisclosed,2025-10-01,Technology,Zero-trust security framework deployment,In Progress,2026-04-15,,Security,Ahead of schedule,
+Palisade,Undisclosed,2025-10-01,People,Team integration,Complete,2025-12-15,2025-12-10,People Team,,
+Palisade,Undisclosed,2025-10-01,Product,Wallet-as-a-service for RLUSD,In Progress,2026-06-01,,Product - Custody,Key enabler for RLUSD distribution,RLUSD + Custody
+Palisade,Undisclosed,2025-10-01,Legal,Security audit and compliance review,Complete,2026-01-15,2026-01-10,Legal + Security,,
+Metaco,$250M,2023-05-17,Technology,Full platform migration to Ripple infra,Complete,2025-06-01,2025-05-15,Platform Engineering,Migration complete,
+Metaco,$250M,2023-05-17,Technology,Integration with Ripple Payments for custody-linked settlement,Complete,2025-09-01,2025-08-20,Custody + Payments Engineering,,Payments + Custody
+Metaco,$250M,2023-05-17,Product,RLUSD custody support,Complete,2025-12-01,2025-11-15,Product - Custody,,RLUSD + Custody
+Metaco,$250M,2023-05-17,Go-to-Market,Rebranded as Ripple Custody,Complete,2025-03-01,2025-02-28,Marketing,,

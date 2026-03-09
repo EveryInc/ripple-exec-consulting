@@ -1,0 +1,16 @@
+deal_id,account_name,region,product,stage,deal_value_usd,probability,close_date_expected,days_in_stage,sales_owner,competitor,last_activity,notes,week_change
+D-1001,Deutsche Bank,Europe,Payments + Custody,"Negotiation","$2,800,000",75%,2026-04-15,18,Thomas Mueller,SWIFT,"Exec meeting scheduled March 12","Largest deal in pipeline; need executive sponsor involvement",Advanced from Proposal
+D-1002,Bank of Thailand,APAC,Payments + CBDC,"Proposal","$1,500,000",50%,2026-05-01,25,Akira Tanaka,None,"Technical demo completed","Central bank engagement; CBDC pilot potential add-on",No Change
+D-1003,National Bank of Canada,Americas,Payments + RLUSD,"Qualified","$900,000",30%,2026-06-01,12,Maria Santos,Circle,"Discovery call completed","Interested in RLUSD for CAD-USD corridor",New This Week
+D-1004,Standard Bank South Africa,Africa,Payments,"Prospect","$600,000",15%,2026-07-01,5,Noor Al-Rashidi,Stellar,"Inbound from conference","Remittance corridor focus; Stellar is incumbent",New This Week
+D-1005,Oversea-Chinese Banking Corp,APAC,Prime + Custody,"Negotiation","$3,200,000",80%,2026-03-31,30,Priya Mehta,JPMorgan Kinexys,"Contract redline in progress","High confidence; Kinexys can't match cross-margining",Advanced from Proposal
+D-1006,Barclays UK,Europe,Payments + Custody + RLUSD,"Proposal","$4,500,000",45%,2026-06-15,20,Tom Whitfield,SWIFT + Circle,"RFP response submitted","Largest potential deal; multi-product; competitive",No Change
+D-1007,Banco Santander Mexico,Americas,Payments,"Qualified","$750,000",35%,2026-05-15,8,Carlos Vega,None,"Building on existing Santander global relationship",Existing Santander relationship,No Change
+D-1008,Emirates NBD,Middle East,Payments + RLUSD,"Negotiation","$1,800,000",70%,2026-04-01,15,Noor Al-Rashidi,None,"Pricing approved; legal review","Strong relationship; should close on time",No Change
+D-1009,Sumitomo Mitsui Banking,APAC,Prime + Treasury,"Proposal","$2,100,000",40%,2026-05-30,22,Akira Tanaka,JPMorgan Kinexys,"Demo scheduled March 15","GTreasury integration key differentiator",No Change
+D-1010,Lloyds Banking Group,Europe,Payments,"Prospect","$1,100,000",20%,2026-07-15,3,Tom Whitfield,SWIFT,"Initial meeting completed","FCA license opened the door; early stage",New This Week
+D-1011,Axis Bank India,APAC,Payments,"Qualified","$500,000",25%,2026-06-01,15,Priya Mehta,Stellar,"Technical assessment underway","India market entry; regulatory uncertainty",No Change
+D-1012,First Abu Dhabi Bank,Middle East,Custody + RLUSD,"Proposal","$1,200,000",55%,2026-04-30,10,Noor Al-Rashidi,None,"Proposal delivered","Strong fit; RLUSD for AED-USD settlement",Advanced from Qualified
+D-1013,Tokai Financial Group,APAC,Payments + Prime,"Closed Lost","$2,400,000",0%,N/A,N/A,Akira Tanaka,JPMorgan Kinexys,"March 3","Chose Kinexys; cited existing JPM relationship and regulatory comfort",Lost This Week
+D-1014,BNP Paribas,Europe,Prime + Treasury,"Qualified","$3,000,000",30%,2026-07-01,18,Thomas Mueller,Multiple,"Technical deep-dive scheduled","Complex enterprise sale; long cycle expected",No Change
+D-1015,Kasikornbank Thailand,APAC,Payments + RLUSD,"Closed Won","$850,000",100%,2026-03-05,N/A,Akira Tanaka,None,"March 5","Won! RLUSD for THB-USD corridor. 12-month contract.",Won This Week

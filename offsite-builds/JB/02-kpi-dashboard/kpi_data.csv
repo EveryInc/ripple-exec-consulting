@@ -1,0 +1,79 @@
+week_ending,business_line,kpi_name,actual,target,unit,rag_status
+2026-03-07,Payments,Weekly Transaction Volume,"2,150,000,000","2,300,000,000",USD,Amber
+2026-03-07,Payments,Active Institutional Partners,312,310,count,Green
+2026-03-07,Payments,New Partner Onboards (Weekly),3,2,count,Green
+2026-03-07,Payments,ODL Corridor Utilization,67%,75%,percent,Amber
+2026-03-07,Payments,Average Settlement Time,3.8,5.0,seconds,Green
+2026-03-07,Custody,Assets Under Custody,"18,200,000,000","20,000,000,000",USD,Amber
+2026-03-07,Custody,Active Custody Clients,48,50,count,Amber
+2026-03-07,Custody,New Client Pipeline,12,10,count,Green
+2026-03-07,Custody,Platform Uptime,99.97%,99.95%,percent,Green
+2026-03-07,RLUSD,Market Capitalization,"1,520,000,000","1,500,000,000",USD,Green
+2026-03-07,RLUSD,Weekly Mint Volume,"285,000,000","250,000,000",USD,Green
+2026-03-07,RLUSD,Velocity (Turnover Rate),4.2,4.0,ratio,Green
+2026-03-07,RLUSD,Institutional Holders,85,80,count,Green
+2026-03-07,RLUSD,Integration Partners,42,45,count,Amber
+2026-03-07,Prime,Weekly Trading Volume,"62,000,000,000","60,000,000,000",USD,Green
+2026-03-07,Prime,Active Institutional Clients,305,300,count,Green
+2026-03-07,Prime,Cross-Margin Utilization,28%,35%,percent,Red
+2026-03-07,Prime,Revenue per Client,"17,850","18,000",USD,Amber
+2026-03-07,Treasury,Enterprise Clients,1015,1020,count,Green
+2026-03-07,Treasury,Payments Volume Processed,"245,000,000,000","240,000,000,000",USD,Green
+2026-03-07,Treasury,New Client Implementations,2,2,count,Green
+2026-03-07,Treasury,Platform NPS,72,70,score,Green
+2026-03-07,Company,Total Weekly Revenue,"34,770,000","34,800,000",USD,Green
+2026-03-07,Company,Total Employees,928,925,count,Green
+2026-03-07,Company,XRP Price,1.37,N/A,USD,N/A
+2026-03-07,Company,Cumulative Payment Volume,"95,800,000,000","95,000,000,000",USD,Green
+2026-02-28,Payments,Weekly Transaction Volume,"2,280,000,000","2,250,000,000",USD,Green
+2026-02-28,Payments,Active Institutional Partners,310,308,count,Green
+2026-02-28,Payments,New Partner Onboards (Weekly),2,2,count,Green
+2026-02-28,Payments,ODL Corridor Utilization,71%,75%,percent,Amber
+2026-02-28,Payments,Average Settlement Time,3.6,5.0,seconds,Green
+2026-02-28,Custody,Assets Under Custody,"19,100,000,000","19,500,000,000",USD,Amber
+2026-02-28,Custody,Active Custody Clients,47,48,count,Amber
+2026-02-28,Custody,New Client Pipeline,11,10,count,Green
+2026-02-28,Custody,Platform Uptime,99.99%,99.95%,percent,Green
+2026-02-28,RLUSD,Market Capitalization,"1,480,000,000","1,400,000,000",USD,Green
+2026-02-28,RLUSD,Weekly Mint Volume,"260,000,000","240,000,000",USD,Green
+2026-02-28,RLUSD,Velocity (Turnover Rate),4.1,4.0,ratio,Green
+2026-02-28,RLUSD,Institutional Holders,82,78,count,Green
+2026-02-28,RLUSD,Integration Partners,41,43,count,Amber
+2026-02-28,Prime,Weekly Trading Volume,"59,000,000,000","58,000,000,000",USD,Green
+2026-02-28,Prime,Active Institutional Clients,302,298,count,Green
+2026-02-28,Prime,Cross-Margin Utilization,26%,32%,percent,Red
+2026-02-28,Prime,Revenue per Client,"17,600","18,000",USD,Amber
+2026-02-28,Treasury,Enterprise Clients,1012,1015,count,Green
+2026-02-28,Treasury,Payments Volume Processed,"242,000,000,000","238,000,000,000",USD,Green
+2026-02-28,Treasury,New Client Implementations,3,2,count,Green
+2026-02-28,Treasury,Platform NPS,71,70,score,Green
+2026-02-28,Company,Total Weekly Revenue,"35,300,000","34,300,000",USD,Green
+2026-02-28,Company,Total Employees,926,925,count,Green
+2026-02-28,Company,XRP Price,1.42,N/A,USD,N/A
+2026-02-28,Company,Cumulative Payment Volume,"93,520,000,000","93,000,000,000",USD,Green
+2026-02-21,Payments,Weekly Transaction Volume,"2,180,000,000","2,200,000,000",USD,Green
+2026-02-21,Payments,Active Institutional Partners,308,306,count,Green
+2026-02-21,Payments,New Partner Onboards (Weekly),2,2,count,Green
+2026-02-21,Payments,ODL Corridor Utilization,69%,74%,percent,Amber
+2026-02-21,Payments,Average Settlement Time,3.7,5.0,seconds,Green
+2026-02-21,Custody,Assets Under Custody,"19,500,000,000","19,000,000,000",USD,Green
+2026-02-21,Custody,Active Custody Clients,46,47,count,Green
+2026-02-21,Custody,New Client Pipeline,10,10,count,Green
+2026-02-21,Custody,Platform Uptime,99.98%,99.95%,percent,Green
+2026-02-21,RLUSD,Market Capitalization,"1,400,000,000","1,350,000,000",USD,Green
+2026-02-21,RLUSD,Weekly Mint Volume,"240,000,000","230,000,000",USD,Green
+2026-02-21,RLUSD,Velocity (Turnover Rate),4.0,3.8,ratio,Green
+2026-02-21,RLUSD,Institutional Holders,79,76,count,Green
+2026-02-21,RLUSD,Integration Partners,40,42,count,Amber
+2026-02-21,Prime,Weekly Trading Volume,"56,000,000,000","55,000,000,000",USD,Green
+2026-02-21,Prime,Active Institutional Clients,298,295,count,Green
+2026-02-21,Prime,Cross-Margin Utilization,24%,30%,percent,Red
+2026-02-21,Prime,Revenue per Client,"17,200","17,500",USD,Amber
+2026-02-21,Treasury,Enterprise Clients,1008,1010,count,Green
+2026-02-21,Treasury,Payments Volume Processed,"238,000,000,000","235,000,000,000",USD,Green
+2026-02-21,Treasury,New Client Implementations,2,2,count,Green
+2026-02-21,Treasury,Platform NPS,70,70,score,Green
+2026-02-21,Company,Total Weekly Revenue,"33,390,000","33,590,000",USD,Green
+2026-02-21,Company,Total Employees,924,925,count,Green
+2026-02-21,Company,XRP Price,1.48,N/A,USD,N/A
+2026-02-21,Company,Cumulative Payment Volume,"91,340,000,000","91,000,000,000",USD,Green

@@ -1,0 +1,37 @@
+metric_category,metric_name,current_value,prior_quarter,target,unit,trend,status,notes
+Revenue,Annual Recurring Revenue,48200000,46500000,47000000,USD,Up,Green,Ahead of plan post-acquisition. Driven by enterprise upsells.
+Revenue,Net Revenue Retention,112,110,108,%,Up,Green,Strong expansion from existing customers adding modules.
+Revenue,Gross Revenue Retention,96,95,95,%,Stable,Green,Low churn — 2 SMB logos lost (< $50K combined ARR).
+Revenue,Gross Margin,74,73,72,%,Up,Green,Improved with scale and reduced hosting costs.
+Customers,Total Active Customers,287,279,285,count,Up,Green,8 net new this quarter.
+Customers,Enterprise (>$500K ARR),34,32,33,count,Up,Green,2 new enterprise logos: Global logistics firm and European bank.
+Customers,Mid-Market ($100K-$500K ARR),98,96,97,count,Up,Green,
+Customers,SMB (<$100K ARR),155,151,155,count,Up,Yellow,SMB growth slower than target — sales focus shifted to enterprise.
+Customers,New Logos This Quarter,11,8,10,count,Up,Green,
+Adoption,Cash Forecasting Module,78,74,75,%,Up,Green,Highest adoption module. Key differentiator.
+Adoption,Payment Hub,62,55,60,%,Up,Green,Strong uptake after v3.0 release with multi-bank support.
+Adoption,Bank Connectivity Suite,71,68,70,%,Up,Green,
+Adoption,Risk Management Module,41,35,45,%,Up,Yellow,Growing but below target. New onboarding workflow being tested.
+Adoption,API Integration Usage,58,49,55,%,Up,Green,Enterprise customers driving API adoption for ERP integration.
+Usage,DAU/MAU Ratio,0.42,0.39,0.40,ratio,Up,Green,
+Usage,Avg Session Duration,14.2,13.8,12,minutes,Up,Green,
+Usage,Monthly API Calls,2850000,2200000,2500000,count,Up,Green,30% increase driven by new ERP integrations.
+Satisfaction,NPS Score,47,44,45,score,Up,Green,Improved from 44 after support team expansion.
+Satisfaction,Support Ticket Volume,342,380,350,count,Down,Green,Lower is better. Down 10% from automation improvements.
+Satisfaction,Avg Resolution Time,4.2,5.1,5,hours,Down,Green,Lower is better. New triage system working.
+Satisfaction,Escalation Rate,3.8,4.5,5,%,Down,Green,Lower is better.
+Pipeline,Weighted Pipeline Value,18500000,15200000,16000000,USD,Up,Green,Strong Q2 pipeline building.
+Pipeline,Active Opportunities,47,42,40,count,Up,Green,
+Pipeline,Win Rate (Enterprise),38,35,35,%,Up,Green,
+Pipeline,Win Rate (Mid-Market),42,40,40,%,Up,Green,
+Pipeline,Avg Deal Size (Enterprise),520000,480000,500000,USD,Up,Green,Larger deals from bundled modules.
+Pipeline,Avg Deal Size (Mid-Market),185000,175000,180000,USD,Up,Green,
+Integration,Ripple Custody Integration,65,40,60,%,Up,Green,On track for April beta. API layer complete — UI in progress.
+Integration,RLUSD Settlement Module,25,10,30,%,Up,Yellow,Slightly behind. Dependency on RLUSD API v2.3 (just deployed).
+Integration,Cross-Border Payments Connector,15,5,20,%,Up,Yellow,Early stage. Architecture approved — development starting Q2.
+Integration,Shared Customers (Ripple + GTreasury),12,8,10,count,Up,Green,4 new shared customers identified this quarter.
+Integration,Synergy Pipeline Value,4200000,2800000,3500000,USD,Up,Green,Cross-sell opportunities from Ripple's customer base.
+Operations,Implementation Backlog,8,6,7,count,Up,Yellow,Slightly above target. 2 enterprise onboardings taking longer.
+Operations,Avg Implementation Time,67,72,75,days,Down,Green,Improving. New onboarding playbook cutting 1 week.
+Operations,Sprint Completion Rate,88,85,85,%,Up,Green,
+Operations,Release Cadence,2.3,2.0,2.0,releases/month,Up,Green,Accelerated release cadence post-integration.

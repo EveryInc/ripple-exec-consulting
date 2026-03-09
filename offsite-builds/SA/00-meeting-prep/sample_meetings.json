@@ -1,0 +1,71 @@
+{
+  "meetings": [
+    {
+      "title": "1:1 with Diana Walsh — Regulatory Update",
+      "date": "2026-03-11",
+      "start": "10:00",
+      "end": "10:30",
+      "location": "Phone",
+      "type": "Standing 1:1",
+      "attendees": ["Diana Walsh"],
+      "topic": "Weekly regulatory update. FCA post-conditions follow-up, DFSA annual review prep, Luxembourg CSSF operationalization.",
+      "last_meeting_notes": "March 4: Discussed UK FCA license approval with 3 conditions. Diana recommended Sarah Park as compliance officer nominee. Agreed to review DFSA annual review timeline. Luxembourg approval expected any day.",
+      "open_items": [
+        "CLO sign-off on FCA compliance officer nomination (Sarah Park) — due Tuesday March 11",
+        "DFSA annual review documentation package — Diana's team handling, flagged for awareness",
+        "Luxembourg CSSF license now operational — confirm EU passporting activated"
+      ]
+    },
+    {
+      "title": "Quarterly Legal Team Review",
+      "date": "2026-03-11",
+      "start": "14:00",
+      "end": "15:00",
+      "location": "Zoom",
+      "type": "Quarterly review",
+      "attendees": ["Diana Walsh", "James Morton", "Rachel Kim", "Marcus Chen", "Priya Sharma", "Sarah Park"],
+      "topic": "Q1 legal team performance review. Budget vs. actuals, headcount, key matters status, Q2 priorities.",
+      "last_meeting_notes": "December 16 (Q4 review): Discussed SEC case final stages, acquisition legal workload, 2026 hiring plan (approved 4 new hires). Budget was 6% under for Q4.",
+      "open_items": [
+        "Q1 budget report — James flagged $300K overrun on Rail license transfers",
+        "Headcount: 2 of 4 approved hires filled (employment counsel, compliance analyst). 2 open.",
+        "SEC case now fully closed — Rachel to present final cost accounting",
+        "Multi-stablecoin legal review (USDC/USDT on Rail) — Marcus flagged as blocking product roadmap"
+      ]
+    },
+    {
+      "title": "Board Subcommittee — Legal & Compliance",
+      "date": "2026-03-12",
+      "start": "11:00",
+      "end": "12:00",
+      "location": "Zoom",
+      "type": "Board subcommittee (quarterly)",
+      "attendees": ["Board Member — Audit Chair", "Board Member — Governance Chair", "External Counsel (Davis Polk)", "Marcus Chen"],
+      "topic": "Quarterly compliance report to the board. Regulatory landscape, litigation status, compliance program updates.",
+      "last_meeting_notes": "December 18: Presented SEC case near-resolution, 2026 regulatory strategy, AML program enhancements. Board requested update on acquisition compliance integration at next meeting.",
+      "open_items": [
+        "SEC case closure — formal update to board (historic outcome)",
+        "Acquisition compliance integration status — board requested this last quarter",
+        "AML monitoring system upgrade — Marcus to present new system performance",
+        "Regulatory license tracker — multi-jurisdiction status for board visibility"
+      ]
+    },
+    {
+      "title": "External Counsel Check-in — SEC Matter Close-out",
+      "date": "2026-03-12",
+      "start": "15:00",
+      "end": "15:30",
+      "location": "Phone",
+      "type": "Ad hoc",
+      "attendees": ["Michael Torres (Davis Polk)"],
+      "topic": "Final close-out of SEC matter. Invoice review, case archival, lessons learned documentation.",
+      "last_meeting_notes": "February 28: Discussed final appeal resolution. Michael confirmed all legal proceedings concluded. Agreed to do formal close-out including final billing and document archival.",
+      "open_items": [
+        "Final invoice received — 8% under approved budget (review and approve)",
+        "Case closure letter — Michael drafting, expected this week",
+        "Document archival process — need CLO sign-off on retention policy",
+        "Lessons learned memo — Michael to draft for internal use"
+      ]
+    }
+  ]
+}

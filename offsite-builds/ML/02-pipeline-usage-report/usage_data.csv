@@ -1,0 +1,16 @@
+client_name,region,product,contracted_date,monthly_volume_current,monthly_volume_prior,monthly_volume_3mo_avg,volume_trend,last_active_date,feature_adoption,health_score,risk_flag,notes
+SBI Holdings,APAC,Payments + ODL,2019-04-01,"$420,000,000","$435,000,000","$425,000,000",Stable,2026-03-06,"ODL: Active, RLUSD: Pilot",92,,"Anchor partner; RLUSD MOU signed"
+Santander,Europe,Payments + ODL,2018-06-01,"$310,000,000","$290,000,000","$295,000,000",Growing,2026-03-06,"ODL: Active, One Pay FX: Active",88,,"40% surge in Q3 2025; sustained growth"
+DBS Bank,APAC,Payments + Custody,2021-03-01,"$185,000,000","$180,000,000","$175,000,000",Growing,2026-03-05,"ODL: Active, Custody: Active",85,,
+BNY Mellon,Americas,Custody (RLUSD Custodian),2024-12-01,"N/A","N/A","N/A",N/A,2026-03-06,"RLUSD Custody: Active",95,,"Strategic custodian relationship"
+Meridian National Bank,Americas,Payments,2020-01-15,"$95,000,000","$98,000,000","$100,000,000",Declining,2026-02-28,"ODL: Messaging Only",62,Churn Risk,"Not using ODL; volume declining 3 consecutive months"
+Zand Bank,Middle East,Payments + ODL,2025-03-01,"$78,000,000","$65,000,000","$55,000,000",Growing,2026-03-05,"ODL: Active, RLUSD: Evaluating",80,,"Rapid growth since UAE launch"
+Pacific Trade Bank,APAC,Payments,2019-09-01,"$120,000,000","$125,000,000","$128,000,000",Declining,2026-03-01,"ODL: Messaging Only",58,Churn Risk,"Volume declining; not adopting ODL. Need executive engagement."
+AMINA Bank,Europe,Payments + Custody,2025-12-01,"$42,000,000","$30,000,000","$20,000,000",Growing,2026-03-06,"ODL: Active, Custody: Active, RLUSD: Active",90,,"First European end-to-end; ramping fast"
+GlobalRemit Corp (legacy),Americas,Payments,2019-06-01,"$15,000,000","$18,000,000","$22,000,000",Declining,2026-02-15,"ODL: Suspended",35,Churn Risk,"Relationship deteriorated; shifted volume to competitor"
+Tranglo,APAC,Payments + ODL,2021-06-01,"$55,000,000","$52,000,000","$50,000,000",Stable,2026-03-04,"ODL: Active",75,,
+SBI Remit,APAC,Payments + ODL,2021-01-01,"$88,000,000","$85,000,000","$82,000,000",Growing,2026-03-06,"ODL: Active, RLUSD: Pilot",87,,"Japan-Philippines corridor strong"
+Southern Cross Bank,APAC,Payments,2022-03-01,"$45,000,000","$48,000,000","$50,000,000",Declining,2026-02-20,"ODL: Messaging Only",55,At Risk,"Declining and not on ODL; need re-engagement plan"
+Hidden Road Clients (agg),Global,Prime,2025-06-15,"$62,000,000,000/wk","$58,000,000,000/wk","$52,000,000,000/wk",Growing,2026-03-06,"Cross-Margin: 28% adoption",82,,"RLUSD collateral in beta"
+GTreasury Clients (agg),Global,Treasury,2025-08-01,"$245,000,000,000/yr","$242,000,000,000/yr","$238,000,000,000/yr",Growing,2026-03-06,"Ripple Integration: 15% using",78,,"Cross-sell opportunity pipeline: 45 clients"
+Palisade Clients (agg),Global,Custody/Wallet,2025-10-01,"Early Stage","Early Stage","Early Stage",N/A,2026-03-04,"MPC Wallet: Beta",70,,"Integration with Metaco in progress"

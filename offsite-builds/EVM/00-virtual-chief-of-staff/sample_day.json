@@ -1,0 +1,129 @@
+{
+  "date": "2026-03-10",
+  "participant": "EVM",
+  "role": "SVP Strategic Initiatives, Ripple",
+  "sources": {
+    "calendar": [
+      {
+        "title": "AI Offsite Training Session",
+        "start": "11:00",
+        "end": "15:00",
+        "location": "Mindspace Coworking, Wynwood, Miami",
+        "attendees": ["Full exec team", "Training facilitators"],
+        "context": "Hands-on AI session. Individual build time 1:45-2:30pm."
+      },
+      {
+        "title": "Exec Team Sync — Board Prep",
+        "start": "15:30",
+        "end": "16:00",
+        "location": "Mindspace",
+        "attendees": ["BG", "Exec team"],
+        "context": "Each exec gives 60-second status on board deck section. Brad wants no surprises before Wednesday deadline."
+      },
+      {
+        "title": "LATAM Corridor Partnership Review",
+        "start": "17:00",
+        "end": "17:30",
+        "location": "Zoom",
+        "attendees": ["SA", "JB", "James Morton"],
+        "context": "Review Banco Santander LOI for Brazil-Mexico corridor. Need legal and finance sign-off to countersign. Target: announce at Consensus in May."
+      },
+      {
+        "title": "GTreasury Integration Check-in",
+        "start": "17:30",
+        "end": "18:00",
+        "location": "Zoom",
+        "attendees": ["RN", "JB", "Product Integration Team"],
+        "context": "Biweekly integration status. Ripple Custody integration targeting April beta."
+      }
+    ],
+    "emails": [
+      {
+        "from": "Banco Santander — Partnership Team",
+        "subject": "LATAM corridor expansion — LOI review",
+        "timestamp": "2026-03-10 06:00",
+        "preview": "Eric — attached is the signed LOI for the Brazil-Mexico payment corridor partnership. Legal review needed before countersign. Target: Consensus in May.",
+        "action": "Route to legal, prepare for 5pm review call"
+      },
+      {
+        "from": "BG",
+        "subject": "Competitive positioning — Visa B2B Connect",
+        "timestamp": "2026-03-10 07:50",
+        "preview": "Visa announced expanded B2B Connect coverage to 30 new markets. Need competitive response brief for my CNBC appearance Thursday. Coverage comparison + differentiation talking points by Wednesday AM.",
+        "action": "Coordinate competitive brief — this is in your wheelhouse"
+      },
+      {
+        "from": "Diana Walsh",
+        "subject": "FCA post-conditions — compliance officer nomination",
+        "timestamp": "2026-03-09 22:15",
+        "preview": "FCA compliance officer nomination needs Stu's sign-off by Tuesday. Sarah Park recommended.",
+        "action": "FYI — Stu's decision, but you're CC'd given market activation implications"
+      },
+      {
+        "from": "BG",
+        "subject": "Board prep — final materials due Wednesday",
+        "timestamp": "2026-03-10 06:45",
+        "preview": "All materials due to Monica's team by EOD Wednesday. Flag issues today.",
+        "action": "Confirm your section (M&A integration + strategic initiatives) is on track"
+      },
+      {
+        "from": "Internal — Competitive Intel Team",
+        "subject": "Weekly competitive digest — March 9",
+        "timestamp": "2026-03-09 18:00",
+        "preview": "Key moves: SWIFT testing tokenized asset settlement with 6 banks. Circle launched USDC on 3 new chains. Stellar partnered with MoneyGram for Africa expansion. JPM Kinexys processing volume up 40% QoQ.",
+        "action": "Review — Brad's Visa question makes this timely"
+      },
+      {
+        "from": "RN",
+        "subject": "GTreasury Q1 numbers — preview",
+        "timestamp": "2026-03-09 23:30",
+        "preview": "ARR at $48.2M (up from $46.5M at acquisition). Net retention 112%. 3 new enterprise logos. Integration with Ripple Custody on track for April beta.",
+        "action": "Review before 5:30pm integration check-in"
+      }
+    ],
+    "slack": [
+      {
+        "channel": "#exec-team",
+        "from": "BG",
+        "timestamp": "2026-03-10 08:05",
+        "message": "Reminder: board materials due Wednesday. No extensions.",
+        "relevance": "Your section needs to be ready"
+      },
+      {
+        "channel": "#product-updates",
+        "from": "David Schwartz",
+        "timestamp": "2026-03-10 07:55",
+        "message": "XRPL Batch Transactions amendment passed — goes live March 15. Big for enterprise customers.",
+        "relevance": "Strategic initiative — include in board section as product milestone"
+      },
+      {
+        "channel": "#competitive-intel",
+        "from": "Competitive Intel Bot",
+        "timestamp": "2026-03-10 06:30",
+        "message": "ALERT: Visa B2B Connect expanded to 30 new markets (announcement March 9). Coverage now spans 100+ countries. Key new markets: Brazil, India, Nigeria, Indonesia.",
+        "relevance": "Brad already asked for a response brief — this is the source data"
+      },
+      {
+        "channel": "#partnerships",
+        "from": "LATAM BD Team",
+        "timestamp": "2026-03-09 21:00",
+        "message": "Santander LOI is signed and sent. Waiting on our countersign. Legal review is the gate.",
+        "relevance": "Prep for 5pm review call"
+      },
+      {
+        "channel": "#legal-regulatory",
+        "from": "Diana Walsh",
+        "timestamp": "2026-03-10 07:30",
+        "message": "Luxembourg CSSF license fully operational + EU passporting activated. Live in 8 EU markets.",
+        "relevance": "Market activation milestone — add to board section"
+      },
+      {
+        "channel": "DM",
+        "from": "ML",
+        "timestamp": "2026-03-10 07:00",
+        "message": "Eric — can you send me the M&A integration summary for my board section? Need it by EOD Tuesday.",
+        "relevance": "Direct request with deadline — tomorrow"
+      }
+    ]
+  }
+}
