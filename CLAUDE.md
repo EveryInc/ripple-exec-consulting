@@ -57,7 +57,7 @@ Each executive folder contains:
 
 **Primary tool:** Claude Cowork with MCP connectors (Gmail, Calendar, Slack, Google Drive)
 **Optional advanced track:** Claude Code (for JB and any other power users)
-**Facilitators:** Mike + Natalia (trainers), Srahman (Ripple internal support)
+**Facilitators:** Mike + Natalia (trainers), SR (Ripple internal support)
 
 ## Participant Map
 
@@ -73,7 +73,7 @@ Each executive folder contains:
 
 ### Facilitator Assignments (45-min individual build)
 - **Natalia** floats between ML, KH, and SA (needs more hands-on support)
-- **Srahman** supports RN (knows internal systems and connector status)
+- **SR** supports RN (knows internal systems and connector status)
 - **Mike** covers the room, leads demos, checks in on everyone
 - **JB** gets pointed at Code and let loose
 - **MK and EVM** move quickly with light check-ins
@@ -85,14 +85,14 @@ MCP connectors (Gmail, Calendar, Slack, Google Drive) are pre-configured by IT f
 | Participant | Connector Notes |
 |------------|----------------|
 | RN | **Salesforce:** No official connector — working API workaround. **Tableau:** Working. **Fallback:** CSV in Google Drive pre-session. |
-| SA | Some execs paused at calendar edit/delete permissions. Srahman addressed internally — handle briefly if it resurfaces. |
+| SA | Some execs paused at calendar edit/delete permissions. SR addressed internally — handle briefly if it resurfaces. |
 | All others | Standard connectors (Gmail, Calendar, Slack, Drive) should work. |
 
 ## Session Risks
 
-1. **Permissions anxiety** — Execs paused at calendar edit/delete permissions during setup. Srahman handled it but it could resurface. Brief response, don't let it derail.
+1. **Permissions anxiety** — Execs paused at calendar edit/delete permissions during setup. SR handled it but it could resurface. Brief response, don't let it derail.
 2. **KH's AI-writing skepticism** — Most reluctant participant. Tone/voice exercise designed specifically for this. Have before/after examples ready.
-3. **ML's survey gap** — May not have provided input ("not big on forms"). Board prep aligns with Srahman's relay, but be ready to adapt.
+3. **ML's survey gap** — May not have provided input ("not big on forms"). Board prep aligns with SR's relay, but be ready to adapt.
 4. **Salesforce connector for RN** — No official connector. Tableau is backup, CSV is fallback. Fallback must be seamless.
 5. **Tight room** — Conference room at Mindspace coworking. Physical proximity fine for support but may feel cramped.
 6. **Hard stop at 3:00** — Company meeting immediately follows. Session must end cleanly.
@@ -104,7 +104,7 @@ MCP connectors (Gmail, Calendar, Slack, Google Drive) are pre-configured by IT f
 ## Content Guidelines
 
 - Frame exercises around **synthesis across sources**, not drafting or summarization
-- Avoid "draft a first version" framing — participants already know AI can draft text. Srahman says that's underwhelming.
+- Avoid "draft a first version" framing — participants already know AI can draft text. SR says that's underwhelming.
 - Every exercise should produce a visible "wow" moment within 10-15 minutes, with refinement as stretch
 - Include iterative refinement steps — the first output is a starting point, not the final product
 - Respect participant attitudes: SA is skeptical (don't push), KH worries AI sounds robotic (show voice training), JB is a power user (point him at Code)

@@ -21,7 +21,7 @@ Build a KPI dashboard for a business unit leader, reflecting GTreasury's context
 3. CSV uploaded to Google Drive pre-session (must be seamless — no visible difference in the flow)
 
 ## Facilitator Notes
-- **Support level:** Self-directed. Srahman should check in since he knows the internal systems and connector status.
+- **Support level:** Self-directed. SR should check in since he knows the internal systems and connector status.
 - **Key risk:** Salesforce connector availability. Have the CSV fallback loaded in Google Drive before the session starts.
 - **If it works:** "A technically impressive build" per client. Let him run with it.
 - **His team already uses Claude** — don't over-explain basics. Meet him where he is.

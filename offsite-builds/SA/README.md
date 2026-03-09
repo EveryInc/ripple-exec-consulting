@@ -12,9 +12,9 @@
 ### Primary: Exercise 00 — Meeting Prep Workflow
 **Complexity:** Easy | **Estimated time:** 15-20 min to produce useful output
 
-Simple, high-value exercise: given a calendar event with attendees and topic, pull relevant context and generate talking points, key questions, and background on attendees. Designed to produce immediate value for Stu's literal next meeting with near-zero friction.
+Simple, high-value exercise: given a calendar event with attendees and topic, pull relevant context and generate talking points, key questions, and background on attendees. Designed to produce immediate value for SA's literal next meeting with near-zero friction.
 
-**Connector opportunity:** If Stu's calendar is connected, Claude can pull his actual next meeting and prep for it live. That's the "aha" moment — zero effort, immediate value.
+**Connector opportunity:** If SA's calendar is connected, Claude can pull his actual next meeting and prep for it live. That's the "aha" moment — zero effort, immediate value.
 
 ### Optional Deep-Dives (Stretch / Follow-Up)
 
@@ -28,7 +28,7 @@ Manages the quarter-end shareholder information request process: tracks what dat
 A tool to manage the shareholder contact database: add/remove shareholders, handle multi-email shareholders, validate email addresses, track changes over time, and export clean distribution lists on demand.
 
 ## Facilitator Notes
-- **Support level:** Needs gentle approach. Stu "doesn't see a need for automation — don't push."
+- **Support level:** Needs gentle approach. SA "doesn't see a need for automation — don't push."
 - **Strategy:** Show him something useful for his literal next meeting. If he engages, layer on complexity. If he observes, that's OK.
-- **Connector note:** Some execs paused at calendar edit/delete permissions during setup. If this resurfaces with Stu, handle briefly and move on — Srahman already addressed it internally.
+- **Connector note:** Some execs paused at calendar edit/delete permissions during setup. If this resurfaces with SA, handle briefly and move on — SR already addressed it internally.
 - **If he's interested:** The Team Update Aggregator (Exercise 01) is the natural next step — it directly matches his #1 survey response.

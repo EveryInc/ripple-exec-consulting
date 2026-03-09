@@ -3,14 +3,14 @@
 > **ALL MESSAGES BELOW ARE FICTIONAL - Created as synthetic data for an AI training exercise. These do not represent real Slack messages or actual employee communications.**
 
 ## #exec-team
-- **Brad (Mon):** "Reminder: I want everyone using Claude by end of next week. No exceptions. Sul - make sure IT support is ready."
-- **Monica (Tue):** "Board deck sections due Friday. Please don't be late - we have less buffer this quarter."
-- **Jon (Fri):** "Weekly financials posted. RLUSD continues to be the bright spot. Integration costs running hot."
+- **BG (Mon):** "Reminder: I want everyone using Claude by end of next week. No exceptions. SR - make sure IT support is ready."
+- **ML (Tue):** "Board deck sections due Friday. Please don't be late - we have less buffer this quarter."
+- **JB (Fri):** "Weekly financials posted. RLUSD continues to be the bright spot. Integration costs running hot."
 
 ## #people-team
 - **Jamie Chen (Wed):** "Claude desktop rollout update: all exec laptops configured. Working through remaining 200 employee licenses this week. On track for full deployment by March 13."
-- **Alex Rivera (Tue):** "Benefits harmonization for Hidden Road team: proposal ready for Mariel's review. Recommending April 1 transition date."
-- **Recruiting (Thu):** "Q2 hiring plan finalized: 42 open reqs. Biggest needs: engineering (18), sales (12), compliance (6), ops (6). Ready for Mariel's approval."
+- **Alex Rivera (Tue):** "Benefits harmonization for Hidden Road team: proposal ready for MK's review. Recommending April 1 transition date."
+- **Recruiting (Thu):** "Q2 hiring plan finalized: 42 open reqs. Biggest needs: engineering (18), sales (12), compliance (6), ops (6). Ready for MK's approval."
 
 ## #it-security
 - **Security Lead (Wed):** "Claude MCP connector security review complete. Two findings: 1) Google Drive connector has broad read access - recommend scoping to specific folders; 2) Slack connector captures DM content - need to update privacy notice. Neither is a blocker but both need VP sign-off."

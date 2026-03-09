@@ -24,6 +24,6 @@ A curated daily morning briefing of only the key developments in crypto/blockcha
 
 ## Facilitator Notes
 - **Support level:** Needs more hands-on support. Monica is casual and may not have submitted the survey ("not big on forms").
-- **Approach:** Board prep aligns with what Srahman relayed internally. Be ready to adapt on the fly if she wants to go a different direction.
+- **Approach:** Board prep aligns with what SR relayed internally. Be ready to adapt on the fly if she wants to go a different direction.
 - **Key risk:** She may need help getting started. Natalia should check in early and often.
 - **If she engages quickly:** The Pipeline & Usage report (Exercise 02) is a natural follow-up and matches her #2 survey response.
