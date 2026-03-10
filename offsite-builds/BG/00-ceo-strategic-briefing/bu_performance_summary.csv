@@ -1,0 +1,7 @@
+business_unit,leader,q1_revenue,q1_target,q1_vs_target,key_metric,key_metric_value,key_metric_target,trend,status,top_issue,next_milestone
+Ripple Payments,VP Payments,"$185M","$190M",-3%,Active ODL Corridors,18,20,Stable,Yellow,"APAC volume softness in March; 2 corridor launches delayed by regulatory timing","Brazil-Mexico corridor launch with Santander (April target)"
+Ripple Custody,VP Custody,"$48M","$50M",-4%,Assets Under Custody,"$18.2B","$20B",Down,Yellow,"AUM fees impacted by XRP price decline (~62% from ATH); SaaS component growing","SOC 2 Type II renewal (March 28)"
+RLUSD,VP Digital Assets,"$32M","$28M",+14%,Market Capitalization,"$1.52B","$1.3B",Up,Green,"Beat plan; Mastercard pilot and institutional adoption driving upside","100th institutional holder target (Q2)"
+Ripple Prime (Hidden Road),VP Prime Services,"$108M","$100M",+8%,Weekly Trading Volume (avg),"$59B","$55B",Up,Green,"Integration ahead of schedule; cross-margining adoption at 28% vs 35% target","Cross-margin GA launch for all institutional clients (April)"
+Ripple Treasury (GTreasury),RN,"$35M","$35M",0%,Enterprise Clients,"1,015","1,020",Stable,Green,"On plan; 8 new implementations. Cloud migration $3M over budget","Cloud migration completion (Q2 end)"
+CBDC Programs,VP Digital Currencies,"$2M","$2M",0%,Active Programs,2,2,Stable,Green,"Bhutan and Montenegro ongoing; steady state","Montenegro Phase 2 pilot expansion (May)"

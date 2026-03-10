@@ -1,0 +1,52 @@
+{
+  "engagements": [
+    {
+      "type": "Investor Meeting",
+      "title": "KKR Digital Assets — RLUSD Institutional Allocation",
+      "date": "2026-03-10",
+      "time": "16:00-16:30",
+      "format": "Zoom",
+      "attendees": ["KKR Digital Assets Team (2 partners)", "JB (CFO)", "VP Digital Assets"],
+      "context": "KKR is exploring a $50M RLUSD allocation as part of their digital asset strategy. They want to understand custodial arrangements, yield structure, and Ripple's role as issuer. This would be one of the largest single institutional allocations to date.",
+      "relationship_history": "First direct engagement with KKR. Their head of digital assets attended Ripple Swell 2025 and followed up through IR. No prior investments or partnerships.",
+      "their_public_stance": "KKR has been vocal about digital asset allocation for institutional portfolios. Their 2025 annual letter mentioned stablecoins as 'the most immediately useful crypto primitive for traditional finance.'",
+      "last_interaction": "IR team had introductory call Feb 20. KKR asked detailed questions about RLUSD reserve composition and audit cadence."
+    },
+    {
+      "type": "Media Interview",
+      "title": "Bloomberg TV — Post-SEC Era Feature",
+      "date": "2026-03-12",
+      "time": "10:00-10:20",
+      "format": "In-studio (NYC)",
+      "attendees": ["Bloomberg anchor (Sonali Basak)", "KH (SVP Marketing, prepping talking points)"],
+      "context": "Part of a Bloomberg series on crypto companies post-regulatory clarity. They want Ripple's perspective on building after the SEC case resolution. Likely to ask about XRP price, institutional adoption, and acquisition strategy.",
+      "relationship_history": "BG has done 4 Bloomberg interviews in the past year. Relationship is professional and generally fair. Sonali Basak covered the SEC case extensively.",
+      "their_public_stance": "Bloomberg's crypto coverage has shifted from skeptical to measured. Recent pieces have focused on institutional adoption and regulatory frameworks.",
+      "last_interaction": "Last Bloomberg interview was December 2025 (post-SEC resolution). Coverage was positive — focused on 'what Ripple does next.'"
+    },
+    {
+      "type": "Policy Meeting",
+      "title": "US Treasury — Digital Asset Framework Discussion",
+      "date": "2026-03-14",
+      "time": "14:00-15:00",
+      "format": "In-person (Washington DC)",
+      "attendees": ["Treasury Deputy Secretary", "SA (CLO)", "Head of Policy"],
+      "context": "Treasury is developing a framework for stablecoin issuers and digital asset service providers. Ripple has been invited to provide input as a licensed, US-based company with a resolved SEC matter. This is an opportunity to shape the regulatory environment.",
+      "relationship_history": "Ripple's policy team has engaged with Treasury staff-level for 18 months. This is the first meeting at Deputy Secretary level — a significant elevation.",
+      "their_public_stance": "Current Treasury position is supportive of 'responsible innovation' with emphasis on consumer protection, reserve requirements, and anti-money-laundering compliance.",
+      "last_interaction": "Staff-level meeting in January 2026 to discuss RLUSD reserve structure and audit practices. Treasury team was impressed with transparency."
+    },
+    {
+      "type": "Conference Keynote",
+      "title": "Paris Blockchain Week — Keynote Address",
+      "date": "2026-03-18",
+      "time": "09:30-10:00",
+      "format": "Main stage (keynote + fireside chat)",
+      "attendees": ["2,000+ audience", "Fireside moderator (TBD)"],
+      "context": "Annual keynote at Europe's largest blockchain event. Post-FCA license, post-CSSF approval, post-SEC resolution. The narrative is 'Ripple in Europe.' Audience is a mix of institutional, startup, and regulatory attendees.",
+      "relationship_history": "BG has keynoted PBW twice before (2023, 2024). Ripple is a platinum sponsor. Strong brand association with the event.",
+      "their_public_stance": "PBW has evolved from crypto-native to institutional-focused. 2026 theme is 'Infrastructure for the Next Financial System.'",
+      "last_interaction": "2024 keynote focused on regulatory uncertainty. 2026 is a chance to shift narrative to 'we built through it and here's what's next.'"
+    }
+  ]
+}

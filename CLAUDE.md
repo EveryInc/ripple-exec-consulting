@@ -13,6 +13,8 @@ There is no application code, build system, or test infrastructure. The delivera
 ```
 offsite-builds/
 ├── GROUP/daily-briefing/    # Shared opening exercise (60 min, 11:30-12:30)
+├── BG/                      # CEO
+├── EJ/                      # CVP Corporate & Business Development
 ├── EVM/                     # SVP Strategic Initiatives
 ├── JB/                      # CFO
 ├── KH/                      # SVP Marketing & Comms
@@ -63,6 +65,8 @@ Each executive folder contains:
 
 | Initials | Role | Primary Exercise | Complexity | Support Level |
 |----------|------|-----------------|------------|---------------|
+| BG | CEO | CEO Strategic Briefing | Medium-Hard | Self-directed (light check-ins, sets the tone for the room) |
+| EJ | CVP Corporate & Business Development | Deal Pipeline & Integration Tracker | Medium-Hard | Self-directed (analytical, detail-oriented) |
 | EVM | SVP Strategic Initiatives | Virtual Chief of Staff | Medium | Self-directed (AI champion, has experimented) |
 | JB | CFO | Team Update Aggregator (Finance) | Hard | Self-directed (power user, point at Code) |
 | KH | SVP Marketing & Comms | Contract/PO → Editorial + Voice | Easy-Medium | Needs support (most AI-reluctant, "robotic" concern) |
@@ -76,6 +80,7 @@ Each executive folder contains:
 - **SR** supports RN (knows internal systems and connector status)
 - **Mike** covers the room, leads demos, checks in on everyone
 - **JB** gets pointed at Code and let loose
+- **BG and EJ** self-directed with light check-ins from Mike
 - **MK and EVM** move quickly with light check-ins
 
 ## Connector & Data Status
@@ -99,7 +104,7 @@ MCP connectors (Gmail, Calendar, Slack, Google Drive) are pre-configured by IT f
 
 ## Dominant Theme: "Synthesize My Chaos"
 
-5 of 7 survey respondents expressed the same core need: synthesizing information across multiple sources (email, Slack, calendar, documents) into actionable output. This is the through-line for the group exercise and most individual builds.
+Most survey respondents expressed the same core need: synthesizing information across multiple sources (email, Slack, calendar, documents) into actionable output. This is the through-line for the group exercise and most individual builds.
 
 ## Content Guidelines
 
@@ -117,4 +122,4 @@ MCP connectors (Gmail, Calendar, Slack, Google Drive) are pre-configured by IT f
 - **Products:** Payments (cross-border), Custody, RLUSD (stablecoin, $500M+ market cap), Prime (via Hidden Road), Treasury (via GTreasury)
 - **Key regulatory milestones:** UK FCA license (with conditions), Luxembourg CSSF (clean), Dubai DFSA, Singapore MAS, 40+ jurisdictions
 - **SEC case:** Fully resolved and closed — historic outcome for Ripple
-- **Leadership:** BG (CEO), ML (President), JB (CFO), SA (CLO), EVM (SVP Strategy), KH (SVP Marketing), MK (SVP People/IT), RN (CEO GTreasury BU)
+- **Leadership:** BG (CEO), ML (President), JB (CFO), SA (CLO), EVM (SVP Strategy), EJ (CVP Corp Dev), KH (SVP Marketing), MK (SVP People/IT), RN (CEO GTreasury BU)

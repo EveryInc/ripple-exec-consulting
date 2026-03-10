@@ -1,0 +1,76 @@
+{
+  "date": "2026-03-10",
+  "meetings": [
+    {
+      "title": "Executive Team Weekly",
+      "start": "09:00",
+      "end": "10:00",
+      "location": "Zoom — Bridge Link",
+      "attendees": ["ML", "JB", "SA", "EVM", "KH", "MK", "RN"],
+      "context": "Weekly exec sync. Standing agenda: BU updates, decisions needed, cross-functional items.",
+      "prep_notes": "JB wants hiring plan approval on the agenda. MK wants to raise London office capacity. EVM has the Santander acceleration request.",
+      "decision_expected": true,
+      "recent_threads": [
+        "JB emailed Q2 hiring plan for approval (42 reqs, $12M)",
+        "MK raised London capacity at 94% — shortlist of 2 Canary Wharf options",
+        "EVM flagged Santander wants to accelerate Brazil-Mexico corridor to April"
+      ]
+    },
+    {
+      "title": "Board Pre-Call with DV",
+      "start": "11:00",
+      "end": "11:30",
+      "location": "Phone — DV's mobile",
+      "attendees": ["DV (Board Director)"],
+      "context": "Informal pre-call ahead of March board meeting. DV had questions about ODL corridor targets and integration cost overages.",
+      "prep_notes": "DV's email from yesterday asked two specific questions: (1) path to ODL corridor target, and (2) whether $15M integration overage is one-time. Have answers ready.",
+      "decision_expected": false,
+      "recent_threads": [
+        "DV emailed March 9 re: Q1 preliminary results — wants ODL and integration cost clarity",
+        "Q1 results show 18 vs 20 target corridors; 2 delayed by regulatory timing",
+        "Integration costs: $15M over plan, driven by GTreasury cloud migration + Rail license transfers. Expected to normalize Q2."
+      ]
+    },
+    {
+      "title": "AI Offsite — Executive Training",
+      "start": "11:00",
+      "end": "15:00",
+      "location": "Mindspace, Wynwood, Miami",
+      "attendees": ["Full leadership team + facilitators"],
+      "context": "Company AI training offsite. Guided builds with Claude. Company meeting follows immediately after in the same room.",
+      "prep_notes": "This is the session you're in right now. Focus on the builds and demos.",
+      "decision_expected": false,
+      "recent_threads": []
+    },
+    {
+      "title": "KKR — RLUSD Institutional Allocation",
+      "start": "16:00",
+      "end": "16:30",
+      "location": "Zoom",
+      "attendees": ["KKR Digital Assets Team", "VP Digital Assets", "JB"],
+      "context": "KKR interested in $50M RLUSD allocation. They want to discuss custodial arrangements and yield structure. IR team briefed.",
+      "prep_notes": "KKR is one of the largest institutional players to express interest in RLUSD. This could be a marquee reference client. JB joining to handle financial structure questions.",
+      "decision_expected": false,
+      "recent_threads": [
+        "KKR emailed March 8 expressing interest in $50M allocation",
+        "RLUSD market cap hit $1.52B — 85 institutional holders",
+        "Custody team confirming segregated account structure for institutional allocations"
+      ]
+    },
+    {
+      "title": "SBI Partnership Update",
+      "start": "17:00",
+      "end": "17:30",
+      "location": "Zoom — Japan Bridge",
+      "attendees": ["SBI Holdings — YK (SVP)", "EVM", "VP Payments"],
+      "context": "SBI wants to confirm Q2 launch timeline for RLUSD cross-border settlements in Japan. Their regulatory window closes June 30.",
+      "prep_notes": "SBI has been Ripple's deepest institutional partner in Asia. This call is about confirming commitment to May launch. If we can't commit, they may explore USDC as a bridge currency.",
+      "decision_expected": true,
+      "recent_threads": [
+        "SBI email March 7 asking for May launch commitment",
+        "RLUSD Japan integration at 70% — on track for May if no blockers",
+        "SBI also issued $65M on-chain bond on XRPL in Q1 — partnership deepening"
+      ]
+    }
+  ]
+}
