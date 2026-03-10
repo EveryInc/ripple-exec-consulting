@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GTreasury — KPI Dashboard</title>
+<style>
+  :root {
+    --bg: #0f1117;
+    --surface: #1a1d27;
+    --surface2: #232736;
+    --border: #2e3348;
+    --text: #e4e6f0;
+    --text-dim: #8b8fa7;
+    --green: #34d399;
+    --green-bg: rgba(52,211,153,.12);
+    --yellow: #fbbf24;
+    --yellow-bg: rgba(251,191,36,.12);
+    --red: #f87171;
+    --red-bg: rgba(248,113,113,.12);
+    --blue: #60a5fa;
+    --blue-bg: rgba(96,165,250,.12);
+    --purple: #a78bfa;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.5;
+    min-height: 100vh;
+  }
+
+  /* Header */
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 32px;
+    border-bottom: 1px solid var(--border);
+    background: var(--surface);
+  }
+  .header-left { display: flex; align-items: center; gap: 16px; }
+  .logo {
+    width: 36px; height: 36px; border-radius: 8px;
+    background: linear-gradient(135deg, var(--blue), var(--purple));
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: 14px; color: #fff;
+  }
+  .header h1 { font-size: 20px; font-weight: 600; }
+  .header .subtitle { font-size: 13px; color: var(--text-dim); }
+  .header-right { display: flex; align-items: center; gap: 12px; }
+  .badge {
+    padding: 4px 10px; border-radius: 12px; font-size: 12px; font-weight: 500;
+    background: var(--green-bg); color: var(--green);
+  }
+  .badge.warn { background: var(--yellow-bg); color: var(--yellow); }
+  .date-label { font-size: 13px; color: var(--text-dim); }
+
+  /* Tabs */
+  .tabs {
+    display: flex; gap: 4px; padding: 12px 32px;
+    border-bottom: 1px solid var(--border);
+    background: var(--surface);
+    overflow-x: auto;
+  }
+  .tab {
+    padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 500;
+    cursor: pointer; color: var(--text-dim); border: none; background: none;
+    white-space: nowrap; transition: all .15s;
+  }
+  .tab:hover { color: var(--text); background: var(--surface2); }
+  .tab.active { color: var(--text); background: var(--surface2); }
+
+  /* Main */
+  .main { padding: 24px 32px; max-width: 1440px; margin: 0 auto; }
+
+  /* Executive Summary */
+  .exec-summary {
+    background: linear-gradient(135deg, rgba(96,165,250,.08), rgba(167,139,250,.08));
+    border: 1px solid var(--border);
+    border-radius: 12px; padding: 20px 24px; margin-bottom: 24px;
+    font-size: 14px; line-height: 1.7; color: var(--text-dim);
+  }
+  .exec-summary strong { color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 14px; font-weight: 600; text-transform: uppercase;
+    letter-spacing: .06em; color: var(--text-dim); margin-bottom: 14px;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .section-title .dot {
+    width: 8px; height: 8px; border-radius: 50%; background: var(--blue);
+  }
+
+  /* Grid */
+  .grid {
+    display: grid; gap: 14px;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  }
+
+  /* Card */
+  .card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 12px; padding: 18px 20px;
+    cursor: pointer; transition: all .15s; position: relative;
+  }
+  .card:hover { border-color: #4a5080; transform: translateY(-1px); }
+  .card .label { font-size: 12px; color: var(--text-dim); margin-bottom: 6px; font-weight: 500; }
+  .card .value { font-size: 28px; font-weight: 700; margin-bottom: 4px; }
+  .card .meta { font-size: 12px; color: var(--text-dim); display: flex; align-items: center; gap: 6px; }
+  .card .trend { font-size: 12px; font-weight: 600; display: inline-flex; align-items: center; gap: 3px; }
+  .trend.up { color: var(--green); }
+  .trend.down-good { color: var(--green); }
+  .trend.down-bad { color: var(--red); }
+  .trend.stable { color: var(--text-dim); }
+
+  /* RAG indicator */
+  .rag {
+    position: absolute; top: 14px; right: 16px;
+    width: 10px; height: 10px; border-radius: 50%;
+  }
+  .rag.Green { background: var(--green); box-shadow: 0 0 6px var(--green); }
+  .rag.Yellow { background: var(--yellow); box-shadow: 0 0 6px var(--yellow); }
+  .rag.Red { background: var(--red); box-shadow: 0 0 6px var(--red); }
+
+  /* Sparkline */
+  .sparkline { margin-top: 10px; }
+  .sparkline svg { width: 100%; height: 32px; }
+  .sparkline path { fill: none; stroke-width: 1.5; stroke-linecap: round; }
+  .sparkline .area { stroke: none; opacity: .15; }
+
+  /* Drill-down modal */
+  .modal-overlay {
+    position: fixed; inset: 0; background: rgba(0,0,0,.6); z-index: 100;
+    display: none; align-items: center; justify-content: center;
+    backdrop-filter: blur(4px);
+  }
+  .modal-overlay.open { display: flex; }
+  .modal {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 16px; padding: 28px 32px;
+    max-width: 560px; width: 90%; max-height: 80vh; overflow-y: auto;
+  }
+  .modal h3 { font-size: 18px; margin-bottom: 16px; }
+  .modal .detail-row {
+    display: flex; justify-content: space-between; padding: 8px 0;
+    border-bottom: 1px solid var(--border); font-size: 13px;
+  }
+  .modal .detail-row:last-child { border-bottom: none; }
+  .modal .detail-label { color: var(--text-dim); }
+  .modal .close-btn {
+    position: absolute; top: 16px; right: 20px; background: none;
+    border: none; color: var(--text-dim); cursor: pointer; font-size: 20px;
+  }
+
+  /* Pipeline table */
+  .pipeline-table {
+    width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 14px;
+  }
+  .pipeline-table th {
+    text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border);
+    color: var(--text-dim); font-weight: 500; font-size: 12px; text-transform: uppercase;
+    letter-spacing: .04em;
+  }
+  .pipeline-table td {
+    padding: 10px 12px; border-bottom: 1px solid var(--border);
+  }
+  .pipeline-table tr:hover td { background: var(--surface2); }
+  .stage-badge {
+    padding: 3px 8px; border-radius: 6px; font-size: 11px; font-weight: 600;
+    display: inline-block;
+  }
+  .stage-badge.negotiation { background: rgba(251,191,36,.15); color: var(--yellow); }
+  .stage-badge.technical { background: rgba(96,165,250,.15); color: var(--blue); }
+  .stage-badge.proposal { background: rgba(167,139,250,.15); color: var(--purple); }
+  .stage-badge.discovery { background: rgba(139,143,167,.15); color: var(--text-dim); }
+
+  /* Alerts panel */
+  .alerts-panel {
+    display: none; background: var(--surface); border: 1px solid var(--border);
+    border-radius: 12px; padding: 20px 24px; margin-bottom: 24px;
+  }
+  .alerts-panel.visible { display: block; }
+  .alert-item {
+    display: flex; align-items: center; gap: 12px; padding: 10px 0;
+    border-bottom: 1px solid var(--border); font-size: 13px;
+  }
+  .alert-item:last-child { border-bottom: none; }
+  .alert-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+  .alert-dot.Yellow { background: var(--yellow); }
+  .alert-dot.Red { background: var(--red); }
+
+  /* Integration progress */
+  .progress-bar-bg {
+    width: 100%; height: 6px; border-radius: 3px; background: var(--surface2); margin-top: 8px;
+  }
+  .progress-bar {
+    height: 100%; border-radius: 3px; transition: width .5s ease;
+  }
+  .progress-bar.Green { background: var(--green); }
+  .progress-bar.Yellow { background: var(--yellow); }
+  .progress-bar.Red { background: var(--red); }
+
+  /* Pipeline funnel */
+  .funnel { display: flex; gap: 8px; margin-bottom: 14px; flex-wrap: wrap; }
+  .funnel-stage {
+    flex: 1; min-width: 120px; background: var(--surface); border: 1px solid var(--border);
+    border-radius: 10px; padding: 14px; text-align: center;
+  }
+  .funnel-stage .stage-name { font-size: 11px; color: var(--text-dim); text-transform: uppercase; letter-spacing: .04em; }
+  .funnel-stage .stage-count { font-size: 24px; font-weight: 700; margin: 4px 0; }
+  .funnel-stage .stage-value { font-size: 12px; color: var(--text-dim); }
+
+  @media (max-width: 768px) {
+    .header { flex-direction: column; align-items: flex-start; gap: 8px; padding: 16px; }
+    .main { padding: 16px; }
+    .grid { grid-template-columns: 1fr 1fr; }
+    .funnel { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <div class="header-left">
+    <div class="logo">GT</div>
+    <div>
+      <h1>GTreasury — KPI Dashboard</h1>
+      <div class="subtitle">Business Unit Performance View</div>
+    </div>
+  </div>
+  <div class="header-right">
+    <span class="badge" id="healthBadge">Healthy</span>
+    <span class="date-label">March 10, 2026</span>
+  </div>
+</div>
+
+<!-- Tabs -->
+<div class="tabs">
+  <button class="tab active" data-section="all">Overview</button>
+  <button class="tab" data-section="revenue">Revenue</button>
+  <button class="tab" data-section="product">Product & Adoption</button>
+  <button class="tab" data-section="pipeline">Pipeline & Growth</button>
+  <button class="tab" data-section="integration">Ripple Integration</button>
+  <button class="tab" data-section="operations">Operations</button>
+  <button class="tab" data-section="alerts">Alerts</button>
+</div>
+
+<div class="main">
+  <!-- Executive Summary -->
+  <div class="exec-summary" id="execSummary"></div>
+
+  <!-- Alerts Panel -->
+  <div class="alerts-panel" id="alertsPanel"></div>
+
+  <!-- Sections rendered by JS -->
+  <div id="sectionsContainer"></div>
+</div>
+
+<!-- Drill-down Modal -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal" id="modalContent" style="position:relative;"></div>
+</div>
+
+<script>
+// ── Data ──────────────────────────────────────────────────
+const kpiData = [
+  {cat:"Revenue",name:"Annual Recurring Revenue",current:48200000,prior:46500000,target:47000000,unit:"USD",trend:"Up",status:"Green",notes:"Ahead of plan post-acquisition. Driven by enterprise upsells."},
+  {cat:"Revenue",name:"Net Revenue Retention",current:112,prior:110,target:108,unit:"%",trend:"Up",status:"Green",notes:"Strong expansion from existing customers adding modules."},
+  {cat:"Revenue",name:"Gross Revenue Retention",current:96,prior:95,target:95,unit:"%",trend:"Stable",status:"Green",notes:"Low churn — 2 SMB logos lost (< $50K combined ARR)."},
+  {cat:"Revenue",name:"Gross Margin",current:74,prior:73,target:72,unit:"%",trend:"Up",status:"Green",notes:"Improved with scale and reduced hosting costs."},
+  {cat:"Customers",name:"Total Active Customers",current:287,prior:279,target:285,unit:"count",trend:"Up",status:"Green",notes:"8 net new this quarter."},
+  {cat:"Customers",name:"Enterprise (>$500K ARR)",current:34,prior:32,target:33,unit:"count",trend:"Up",status:"Green",notes:"2 new enterprise logos: Global logistics firm and European bank."},
+  {cat:"Customers",name:"Mid-Market ($100K–$500K)",current:98,prior:96,target:97,unit:"count",trend:"Up",status:"Green",notes:""},
+  {cat:"Customers",name:"SMB (<$100K ARR)",current:155,prior:151,target:155,unit:"count",trend:"Up",status:"Yellow",notes:"SMB growth slower than target — sales focus shifted to enterprise."},
+  {cat:"Customers",name:"New Logos This Quarter",current:11,prior:8,target:10,unit:"count",trend:"Up",status:"Green",notes:""},
+  {cat:"Adoption",name:"Cash Forecasting Module",current:78,prior:74,target:75,unit:"%",trend:"Up",status:"Green",notes:"Highest adoption module. Key differentiator."},
+  {cat:"Adoption",name:"Payment Hub",current:62,prior:55,target:60,unit:"%",trend:"Up",status:"Green",notes:"Strong uptake after v3.0 release with multi-bank support."},
+  {cat:"Adoption",name:"Bank Connectivity Suite",current:71,prior:68,target:70,unit:"%",trend:"Up",status:"Green",notes:""},
+  {cat:"Adoption",name:"Risk Management Module",current:41,prior:35,target:45,unit:"%",trend:"Up",status:"Yellow",notes:"Growing but below target. New onboarding workflow being tested."},
+  {cat:"Adoption",name:"API Integration Usage",current:58,prior:49,target:55,unit:"%",trend:"Up",status:"Green",notes:"Enterprise customers driving API adoption for ERP integration."},
+  {cat:"Usage",name:"DAU/MAU Ratio",current:0.42,prior:0.39,target:0.40,unit:"ratio",trend:"Up",status:"Green",notes:""},
+  {cat:"Usage",name:"Avg Session Duration",current:14.2,prior:13.8,target:12,unit:"min",trend:"Up",status:"Green",notes:""},
+  {cat:"Usage",name:"Monthly API Calls",current:2850000,prior:2200000,target:2500000,unit:"count",trend:"Up",status:"Green",notes:"30% increase driven by new ERP integrations."},
+  {cat:"Satisfaction",name:"NPS Score",current:47,prior:44,target:45,unit:"score",trend:"Up",status:"Green",notes:"Improved from 44 after support team expansion."},
+  {cat:"Satisfaction",name:"Support Ticket Volume",current:342,prior:380,target:350,unit:"count",trend:"Down",status:"Green",notes:"Lower is better. Down 10% from automation improvements."},
+  {cat:"Satisfaction",name:"Avg Resolution Time",current:4.2,prior:5.1,target:5,unit:"hours",trend:"Down",status:"Green",notes:"Lower is better. New triage system working."},
+  {cat:"Satisfaction",name:"Escalation Rate",current:3.8,prior:4.5,target:5,unit:"%",trend:"Down",status:"Green",notes:"Lower is better."},
+  {cat:"Pipeline",name:"Weighted Pipeline Value",current:18500000,prior:15200000,target:16000000,unit:"USD",trend:"Up",status:"Green",notes:"Strong Q2 pipeline building."},
+  {cat:"Pipeline",name:"Active Opportunities",current:47,prior:42,target:40,unit:"count",trend:"Up",status:"Green",notes:""},
+  {cat:"Pipeline",name:"Win Rate (Enterprise)",current:38,prior:35,target:35,unit:"%",trend:"Up",status:"Green",notes:""},
+  {cat:"Pipeline",name:"Win Rate (Mid-Market)",current:42,prior:40,target:40,unit:"%",trend:"Up",status:"Green",notes:""},
+  {cat:"Pipeline",name:"Avg Deal Size (Enterprise)",current:520000,prior:480000,target:500000,unit:"USD",trend:"Up",status:"Green",notes:"Larger deals from bundled modules."},
+  {cat:"Pipeline",name:"Avg Deal Size (Mid-Market)",current:185000,prior:175000,target:180000,unit:"USD",trend:"Up",status:"Green",notes:""},
+  {cat:"Integration",name:"Ripple Custody Integration",current:65,prior:40,target:60,unit:"%",trend:"Up",status:"Green",notes:"On track for April beta. API layer complete — UI in progress."},
+  {cat:"Integration",name:"RLUSD Settlement Module",current:25,prior:10,target:30,unit:"%",trend:"Up",status:"Yellow",notes:"Slightly behind. Dependency on RLUSD API v2.3 (just deployed)."},
+  {cat:"Integration",name:"Cross-Border Payments Connector",current:15,prior:5,target:20,unit:"%",trend:"Up",status:"Yellow",notes:"Early stage. Architecture approved — development starting Q2."},
+  {cat:"Integration",name:"Shared Customers (Ripple + GTreasury)",current:12,prior:8,target:10,unit:"count",trend:"Up",status:"Green",notes:"4 new shared customers identified this quarter."},
+  {cat:"Integration",name:"Synergy Pipeline Value",current:4200000,prior:2800000,target:3500000,unit:"USD",trend:"Up",status:"Green",notes:"Cross-sell opportunities from Ripple's customer base."},
+  {cat:"Operations",name:"Implementation Backlog",current:8,prior:6,target:7,unit:"count",trend:"Up",status:"Yellow",notes:"Slightly above target. 2 enterprise onboardings taking longer."},
+  {cat:"Operations",name:"Avg Implementation Time",current:67,prior:72,target:75,unit:"days",trend:"Down",status:"Green",notes:"Improving. New onboarding playbook cutting 1 week."},
+  {cat:"Operations",name:"Sprint Completion Rate",current:88,prior:85,target:85,unit:"%",trend:"Up",status:"Green",notes:""},
+  {cat:"Operations",name:"Release Cadence",current:2.3,prior:2.0,target:2.0,unit:"rel/mo",trend:"Up",status:"Green",notes:"Accelerated release cadence post-integration."},
+];
+
+const deals = [
+  {id:"OPP-2601",account:"Barclays Treasury Services",segment:"Enterprise",stage:"Negotiation",amount:850000,close:"2026-04-15",prob:70,manager:"Sarah Mitchell",product:"Cash Forecasting + Payment Hub + Bank Connectivity",next:"Contract redline review — legal on both sides engaged",days:14},
+  {id:"OPP-2602",account:"Maersk Group Treasury",segment:"Enterprise",stage:"Technical Evaluation",amount:720000,close:"2026-05-30",prob:45,manager:"James Thornton",product:"Full Platform",next:"POC environment provisioned — 2 week evaluation starting March 10",days:7},
+  {id:"OPP-2603",account:"Nestlé Treasury Center",segment:"Enterprise",stage:"Discovery",amount:600000,close:"2026-06-30",prob:25,manager:"Sarah Mitchell",product:"Cash Forecasting + Risk Management",next:"Initial demo completed — CFO wants deeper dive on forecasting accuracy",days:21},
+  {id:"OPP-2604",account:"Siemens Financial Services",segment:"Enterprise",stage:"Proposal Sent",amount:540000,close:"2026-04-30",prob:55,manager:"James Thornton",product:"Payment Hub + Bank Connectivity",next:"Proposal sent March 3 — decision expected by April 15",days:6},
+  {id:"OPP-2605",account:"Toyota Financial Services",segment:"Enterprise",stage:"Negotiation",amount:480000,close:"2026-03-31",prob:80,manager:"David Park",product:"Cash Forecasting + Payment Hub",next:"Final pricing discussion scheduled March 12. Strong champion in treasury VP.",days:8},
+  {id:"OPP-2606",account:"Flex Ltd",segment:"Mid-Market",stage:"Proposal Sent",amount:220000,close:"2026-04-15",prob:50,manager:"Lisa Chen",product:"Payment Hub + Bank Connectivity",next:"Waiting on procurement review.",days:12},
+  {id:"OPP-2607",account:"H&M Group",segment:"Mid-Market",stage:"Technical Evaluation",amount:195000,close:"2026-05-15",prob:40,manager:"David Park",product:"Cash Forecasting",next:"POC running — initial feedback positive. Competing with Kyriba.",days:18},
+  {id:"OPP-2608",account:"Ryder System",segment:"Mid-Market",stage:"Discovery",amount:175000,close:"2026-06-15",prob:20,manager:"Lisa Chen",product:"Full Platform",next:"First demo March 14. Referred by existing customer.",days:3},
+  {id:"OPP-2609",account:"Emerson Electric",segment:"Mid-Market",stage:"Negotiation",amount:210000,close:"2026-03-28",prob:75,manager:"Sarah Mitchell",product:"Cash Forecasting + Risk Management",next:"MSA nearly finalized. Implementation start target: April 7.",days:5},
+  {id:"OPP-2610",account:"AES Corporation",segment:"Mid-Market",stage:"Proposal Sent",amount:165000,close:"2026-04-30",prob:45,manager:"James Thornton",product:"Bank Connectivity Suite",next:"Competing with incumbent (FIS). Multi-bank advantage resonates.",days:10},
+  {id:"OPP-2611",account:"Ripple Payments (Cross-sell)",segment:"Enterprise",stage:"Discovery",amount:350000,close:"2026-06-30",prob:30,manager:"David Park",product:"RLUSD Settlement + Cross-Border",next:"Synergy opportunity — joint pitch with Ripple sales team.",days:5},
+  {id:"OPP-2612",account:"Hidden Road (Internal)",segment:"Enterprise",stage:"Negotiation",amount:0,close:"2026-04-01",prob:95,manager:"Internal",product:"Full Platform",next:"Internal deployment for Ripple's prime brokerage unit.",days:20},
+  {id:"OPP-2613",account:"Deutsche Post DHL",segment:"Enterprise",stage:"Discovery",amount:680000,close:"2026-07-31",prob:15,manager:"James Thornton",product:"Cash Forecasting + Payment Hub",next:"Inbound inquiry. First call March 11.",days:1},
+  {id:"OPP-2614",account:"CF Industries",segment:"Mid-Market",stage:"Technical Evaluation",amount:145000,close:"2026-05-15",prob:35,manager:"Lisa Chen",product:"Cash Forecasting",next:"POC in progress. Key ask: SAP S/4HANA integration.",days:22},
+  {id:"OPP-2615",account:"Cardinal Health",segment:"Mid-Market",stage:"Proposal Sent",amount:190000,close:"2026-04-15",prob:50,manager:"David Park",product:"Payment Hub + Risk Management",next:"Proposal delivered. Decision maker on PTO until March 15.",days:15},
+];
+
+// ── Helpers ───────────────────────────────────────────────
+const fmt = {
+  USD: v => '$' + (v >= 1e6 ? (v/1e6).toFixed(1) + 'M' : v >= 1e3 ? (v/1e3).toFixed(0) + 'K' : v.toLocaleString()),
+  '%': v => v + '%',
+  count: v => v >= 1e6 ? (v/1e6).toFixed(1) + 'M' : v.toLocaleString(),
+  ratio: v => v.toFixed(2),
+  score: v => v.toString(),
+  hours: v => v + 'h',
+  min: v => v + ' min',
+  days: v => v + ' days',
+  'rel/mo': v => v.toFixed(1) + '/mo',
+};
+
+function fmtVal(v, unit) { return (fmt[unit] || (x => x.toString()))(v); }
+
+function pctChange(cur, prev) {
+  if (!prev) return 0;
+  return ((cur - prev) / Math.abs(prev) * 100);
+}
+
+function trendArrow(trend, name) {
+  const lowerIsBetter = ['Support Ticket Volume','Avg Resolution Time','Escalation Rate','Avg Implementation Time','Implementation Backlog'].includes(name);
+  if (trend === 'Stable') return '<span class="trend stable">→ Stable</span>';
+  const pct = Math.abs(pctChange(
+    kpiData.find(d=>d.name===name)?.current,
+    kpiData.find(d=>d.name===name)?.prior
+  )).toFixed(1);
+  if (trend === 'Up') {
+    const cls = lowerIsBetter ? 'down-bad' : 'up';
+    return `<span class="trend ${cls}">↑ ${pct}%</span>`;
+  }
+  const cls = lowerIsBetter ? 'down-good' : 'down-bad';
+  return `<span class="trend ${cls}">↓ ${pct}%</span>`;
+}
+
+// Generate fake sparkline data from prior → current over 6 points
+function sparkPoints(prior, current) {
+  const pts = [];
+  const diff = current - prior;
+  for (let i = 0; i < 6; i++) {
+    const base = prior + diff * (i / 5);
+    const noise = diff * 0.08 * (Math.sin(i * 2.5) + Math.cos(i * 1.3));
+    pts.push(base + noise);
+  }
+  return pts;
+}
+
+function sparklineSVG(pts, color) {
+  const min = Math.min(...pts), max = Math.max(...pts);
+  const range = max - min || 1;
+  const w = 120, h = 32, pad = 2;
+  const coords = pts.map((v, i) => {
+    const x = pad + (i / (pts.length - 1)) * (w - 2 * pad);
+    const y = h - pad - ((v - min) / range) * (h - 2 * pad);
+    return [x, y];
+  });
+  const lineD = coords.map((c, i) => (i === 0 ? 'M' : 'L') + c[0].toFixed(1) + ',' + c[1].toFixed(1)).join(' ');
+  const areaD = lineD + ` L${coords[coords.length-1][0].toFixed(1)},${h} L${coords[0][0].toFixed(1)},${h} Z`;
+  return `<svg viewBox="0 0 ${w} ${h}" preserveAspectRatio="none">
+    <path class="area" d="${areaD}" fill="${color}"/>
+    <path d="${lineD}" stroke="${color}"/>
+  </svg>`;
+}
+
+const statusColor = s => s === 'Green' ? 'var(--green)' : s === 'Yellow' ? 'var(--yellow)' : 'var(--red)';
+
+// ── Category → Section mapping ───────────────────────────
+const sectionMap = {
+  'Revenue': { tab: 'revenue', title: 'Business Health — Revenue', order: 1 },
+  'Customers': { tab: 'revenue', title: 'Business Health — Customers', order: 2 },
+  'Adoption': { tab: 'product', title: 'Product & Adoption — Feature Adoption', order: 3 },
+  'Usage': { tab: 'product', title: 'Product & Adoption — Platform Usage', order: 4 },
+  'Satisfaction': { tab: 'product', title: 'Product & Adoption — Customer Satisfaction', order: 5 },
+  'Pipeline': { tab: 'pipeline', title: 'Pipeline & Growth', order: 6 },
+  'Integration': { tab: 'integration', title: 'Ripple Integration', order: 7 },
+  'Operations': { tab: 'operations', title: 'Operational Health', order: 8 },
+};
+
+// ── Render ────────────────────────────────────────────────
+function renderSections(filter) {
+  const container = document.getElementById('sectionsContainer');
+  container.innerHTML = '';
+
+  // Show/hide alerts
+  document.getElementById('alertsPanel').classList.toggle('visible', filter === 'alerts');
+  if (filter === 'alerts') return;
+
+  const groups = {};
+  kpiData.forEach(d => {
+    const key = d.cat;
+    if (!groups[key]) groups[key] = [];
+    groups[key].push(d);
+  });
+
+  const ordered = Object.entries(groups).sort((a, b) => (sectionMap[a[0]]?.order || 99) - (sectionMap[b[0]]?.order || 99));
+
+  ordered.forEach(([cat, items]) => {
+    const info = sectionMap[cat];
+    if (filter !== 'all' && info?.tab !== filter) return;
+
+    const section = document.createElement('div');
+    section.className = 'section';
+    section.innerHTML = `<div class="section-title"><span class="dot"></span>${info?.title || cat}</div>`;
+
+    // Special: integration progress bars
+    if (cat === 'Integration') {
+      const integrationItems = items.filter(d => d.unit === '%');
+      const otherItems = items.filter(d => d.unit !== '%');
+      const grid = document.createElement('div');
+      grid.className = 'grid';
+
+      integrationItems.forEach(d => {
+        const card = makeIntegrationCard(d);
+        grid.appendChild(card);
+      });
+      otherItems.forEach(d => {
+        grid.appendChild(makeCard(d));
+      });
+      section.appendChild(grid);
+    } else {
+      const grid = document.createElement('div');
+      grid.className = 'grid';
+      items.forEach(d => grid.appendChild(makeCard(d)));
+      section.appendChild(grid);
+    }
+
+    container.appendChild(section);
+  });
+
+  // Pipeline section: add funnel + deal table
+  if (filter === 'all' || filter === 'pipeline') {
+    renderPipelineDetails(container);
+  }
+}
+
+function makeCard(d) {
+  const card = document.createElement('div');
+  card.className = 'card';
+  const color = statusColor(d.status);
+  const pts = sparkPoints(d.prior, d.current);
+
+  card.innerHTML = `
+    <div class="rag ${d.status}"></div>
+    <div class="label">${d.name}</div>
+    <div class="value" style="color:${color}">${fmtVal(d.current, d.unit)}</div>
+    <div class="meta">
+      ${trendArrow(d.trend, d.name)}
+      <span>vs ${fmtVal(d.prior, d.unit)} prior Q</span>
+    </div>
+    <div class="meta" style="margin-top:2px;">
+      <span>Target: ${fmtVal(d.target, d.unit)}</span>
+    </div>
+    <div class="sparkline">${sparklineSVG(pts, color)}</div>
+  `;
+
+  card.addEventListener('click', () => openDrillDown(d));
+  return card;
+}
+
+function makeIntegrationCard(d) {
+  const card = document.createElement('div');
+  card.className = 'card';
+  const color = statusColor(d.status);
+
+  card.innerHTML = `
+    <div class="rag ${d.status}"></div>
+    <div class="label">${d.name}</div>
+    <div class="value" style="color:${color}">${d.current}%</div>
+    <div class="meta">
+      ${trendArrow(d.trend, d.name)}
+      <span>Target: ${d.target}%</span>
+    </div>
+    <div class="progress-bar-bg">
+      <div class="progress-bar ${d.status}" style="width:${d.current}%"></div>
+    </div>
+    ${d.notes ? `<div class="meta" style="margin-top:8px;font-style:italic;">${d.notes}</div>` : ''}
+  `;
+
+  card.addEventListener('click', () => openDrillDown(d));
+  return card;
+}
+
+function renderPipelineDetails(container) {
+  const section = document.createElement('div');
+  section.className = 'section';
+
+  // Funnel
+  const stages = ['Discovery','Technical Evaluation','Proposal Sent','Negotiation'];
+  const funnelHtml = stages.map(s => {
+    const stageDeals = deals.filter(d => d.stage === s);
+    const total = stageDeals.reduce((a, d) => a + d.amount, 0);
+    return `<div class="funnel-stage">
+      <div class="stage-name">${s}</div>
+      <div class="stage-count">${stageDeals.length}</div>
+      <div class="stage-value">${fmt.USD(total)}</div>
+    </div>`;
+  }).join('');
+
+  // Top deals table
+  const topDeals = [...deals].filter(d => d.amount > 0).sort((a, b) => b.amount - a.amount).slice(0, 7);
+  const stageClass = s => s === 'Negotiation' ? 'negotiation' : s === 'Technical Evaluation' ? 'technical' : s === 'Proposal Sent' ? 'proposal' : 'discovery';
+
+  section.innerHTML = `
+    <div class="section-title"><span class="dot"></span>Pipeline Funnel</div>
+    <div class="funnel">${funnelHtml}</div>
+    <div class="section-title" style="margin-top:20px;"><span class="dot"></span>Top Opportunities</div>
+    <div style="overflow-x:auto;">
+      <table class="pipeline-table">
+        <thead><tr>
+          <th>Account</th><th>Stage</th><th>Amount</th><th>Prob</th><th>Close</th><th>Next Step</th>
+        </tr></thead>
+        <tbody>
+          ${topDeals.map(d => `<tr>
+            <td><strong>${d.account}</strong><br><span style="color:var(--text-dim);font-size:11px;">${d.segment} · ${d.manager}</span></td>
+            <td><span class="stage-badge ${stageClass(d.stage)}">${d.stage}</span></td>
+            <td>${fmt.USD(d.amount)}</td>
+            <td>${d.prob}%</td>
+            <td>${d.close}</td>
+            <td style="max-width:220px;font-size:12px;color:var(--text-dim);">${d.next}</td>
+          </tr>`).join('')}
+        </tbody>
+      </table>
+    </div>
+  `;
+  container.appendChild(section);
+}
+
+// ── Drill-Down Modal ─────────────────────────────────────
+function openDrillDown(d) {
+  const modal = document.getElementById('modalContent');
+  const change = pctChange(d.current, d.prior);
+  const vsTarget = pctChange(d.current, d.target);
+
+  modal.innerHTML = `
+    <button class="close-btn" onclick="closeModal()">✕</button>
+    <h3>${d.name}</h3>
+    <div class="detail-row"><span class="detail-label">Category</span><span>${d.cat}</span></div>
+    <div class="detail-row"><span class="detail-label">Current Value</span><span style="font-weight:600;">${fmtVal(d.current, d.unit)}</span></div>
+    <div class="detail-row"><span class="detail-label">Prior Quarter</span><span>${fmtVal(d.prior, d.unit)}</span></div>
+    <div class="detail-row"><span class="detail-label">QoQ Change</span><span>${change >= 0 ? '+' : ''}${change.toFixed(1)}%</span></div>
+    <div class="detail-row"><span class="detail-label">Target</span><span>${fmtVal(d.target, d.unit)}</span></div>
+    <div class="detail-row"><span class="detail-label">vs Target</span><span style="color:${d.status === 'Green' ? 'var(--green)' : d.status === 'Yellow' ? 'var(--yellow)' : 'var(--red)'}">${vsTarget >= 0 ? '+' : ''}${vsTarget.toFixed(1)}%</span></div>
+    <div class="detail-row"><span class="detail-label">Status</span><span><span class="rag ${d.status}" style="display:inline-block;vertical-align:middle;margin-right:6px;"></span>${d.status}</span></div>
+    ${d.notes ? `<div class="detail-row" style="flex-direction:column;gap:4px;"><span class="detail-label">Notes</span><span>${d.notes}</span></div>` : ''}
+  `;
+  document.getElementById('modalOverlay').classList.add('open');
+}
+
+function closeModal() {
+  document.getElementById('modalOverlay').classList.remove('open');
+}
+document.getElementById('modalOverlay').addEventListener('click', e => {
+  if (e.target === e.currentTarget) closeModal();
+});
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+// ── Alerts ───────────────────────────────────────────────
+function renderAlerts() {
+  const panel = document.getElementById('alertsPanel');
+  const alerts = kpiData.filter(d => d.status === 'Yellow' || d.status === 'Red');
+  if (alerts.length === 0) {
+    panel.innerHTML = '<div style="color:var(--text-dim);font-size:13px;">No alerts — all metrics within target.</div>';
+    return;
+  }
+  panel.innerHTML = `<div class="section-title"><span class="dot" style="background:var(--yellow)"></span>Metrics Needing Attention (${alerts.length})</div>` +
+    alerts.map(d => `
+      <div class="alert-item">
+        <span class="alert-dot ${d.status}"></span>
+        <div style="flex:1;">
+          <strong>${d.name}</strong> <span style="color:var(--text-dim);">(${d.cat})</span><br>
+          <span style="font-size:12px;color:var(--text-dim);">Current: ${fmtVal(d.current, d.unit)} · Target: ${fmtVal(d.target, d.unit)}${d.notes ? ' — ' + d.notes : ''}</span>
+        </div>
+      </div>
+    `).join('');
+}
+
+// ── Executive Summary ────────────────────────────────────
+function renderExecSummary() {
+  const arr = kpiData.find(d => d.name === 'Annual Recurring Revenue');
+  const nrr = kpiData.find(d => d.name === 'Net Revenue Retention');
+  const pipe = kpiData.find(d => d.name === 'Weighted Pipeline Value');
+  const custs = kpiData.find(d => d.name === 'Total Active Customers');
+  const custody = kpiData.find(d => d.name === 'Ripple Custody Integration');
+  const yellows = kpiData.filter(d => d.status === 'Yellow').length;
+  const reds = kpiData.filter(d => d.status === 'Red').length;
+
+  const arrGrowth = pctChange(arr.current, arr.prior).toFixed(1);
+  const pipeGrowth = pctChange(pipe.current, pipe.prior).toFixed(0);
+
+  let summary = `<strong>ARR is at ${fmt.USD(arr.current)}</strong>, up ${arrGrowth}% QoQ and ahead of the ${fmt.USD(arr.target)} target — driven by enterprise upsells and strong net retention at ${nrr.current}%. `;
+  summary += `The weighted pipeline stands at <strong>${fmt.USD(pipe.current)}</strong> (${pipeGrowth}% above prior quarter), with ${custs.current} active customers and 11 new logos this quarter. `;
+  summary += `Ripple Custody integration is at ${custody.current}% completion (on track for April beta). `;
+
+  if (yellows > 0) {
+    summary += `<span style="color:var(--yellow);">${yellows} metric${yellows > 1 ? 's' : ''} flagged yellow</span> — primarily in risk module adoption, RLUSD integration timeline, and implementation backlog.`;
+  }
+
+  document.getElementById('execSummary').innerHTML = summary;
+
+  // Update health badge
+  if (reds > 0) {
+    document.getElementById('healthBadge').textContent = `${reds} Red`;
+    document.getElementById('healthBadge').className = 'badge warn';
+  } else if (yellows > 0) {
+    document.getElementById('healthBadge').textContent = `${yellows} Watch`;
+    document.getElementById('healthBadge').className = 'badge warn';
+  }
+}
+
+// ── Tabs ─────────────────────────────────────────────────
+document.querySelectorAll('.tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    renderSections(tab.dataset.section);
+  });
+});
+
+// ── Init ─────────────────────────────────────────────────
+renderExecSummary();
+renderAlerts();
+renderSections('all');
+</script>
+</body>
+</html>
